@@ -57,9 +57,16 @@ public class DeckManager : MonoBehaviour
 
     public void RefillDeckFromGraveyard()
     {
-        Debug.Log("🔄 덱이 비었습니다! 묘지에서 덱을 다시 채웁니다.");
+        if (graveyard.Count == 0)
+        {
+            Debug.LogWarning("⚠️ 묘지가 비어 있어서 덱을 리필할 수 없습니다!");
+            return;
+        }
+
         deck.AddRange(graveyard);
         graveyard.Clear();
         ShuffleDeck();
+        Debug.Log("✅ 묘지에서 덱을 다시 채웠습니다!");
     }
+
 }
