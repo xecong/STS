@@ -1,0 +1,730 @@
+fileFormatVersion: 2
+guid: 22c51c9aafdcb704199060ad7e69ef38
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5914619032853458925
+    second: RPG-Cards-Disables-And-Back_0
+  - first:
+      213: -1296219164641861579
+    second: RPG-Cards-Disables-And-Back_1
+  - first:
+      213: -7440702993930294058
+    second: RPG-Cards-Disables-And-Back_2
+  - first:
+      213: 1527297253048610369
+    second: RPG-Cards-Disables-And-Back_3
+  - first:
+      213: -7640726679855705393
+    second: RPG-Cards-Disables-And-Back_4
+  - first:
+      213: 797288181408690108
+    second: RPG-Cards-Disables-And-Back_5
+  - first:
+      213: 5403965394829508335
+    second: RPG-Cards-Disables-And-Back_6
+  - first:
+      213: -8663730731122757209
+    second: RPG-Cards-Disables-And-Back_7
+  - first:
+      213: -8615641267449918166
+    second: RPG-Cards-Disables-And-Back_8
+  - first:
+      213: 4870354859846537280
+    second: RPG-Cards-Disables-And-Back_9
+  - first:
+      213: 9185437679800336943
+    second: RPG-Cards-Disables-And-Back_10
+  - first:
+      213: -2080319596195000614
+    second: RPG-Cards-Disables-And-Back_11
+  - first:
+      213: 6124789215843292975
+    second: RPG-Cards-Disables-And-Back_12
+  - first:
+      213: 2802265013286066727
+    second: RPG-Cards-Disables-And-Back_13
+  - first:
+      213: 2818263968150342086
+    second: RPG-Cards-Disables-And-Back_14
+  - first:
+      213: -9025494365174485694
+    second: RPG-Cards-Disables-And-Back_15
+  - first:
+      213: -3965918259421174763
+    second: RPG-Cards-Disables-And-Back_16
+  - first:
+      213: 3203841920141263648
+    second: RPG-Cards-Disables-And-Back_17
+  - first:
+      213: -6452195104780516805
+    second: RPG-Cards-Disables-And-Back_18
+  - first:
+      213: -8416563607728675960
+    second: RPG-Cards-Disables-And-Back_19
+  - first:
+      213: 8177326474735932034
+    second: RPG-Cards-Disables-And-Back_20
+  - first:
+      213: 2473573119408757786
+    second: RPG-Cards-Disables-And-Back_21
+  - first:
+      213: -3402098464392469185
+    second: RPG-Cards-Disables-And-Back_22
+  - first:
+      213: -3577575452566292598
+    second: RPG-Cards-Disables-And-Back_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RPG-Cards-Disables-And-Back_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 151
+        width: 82
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 310510d935d0beda0800000000000000
+      internalID: -5914619032853458925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG-Cards-Disables-And-Back_1
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 151
+        width: 82
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 530e7749987e20ee0800000000000000
+      internalID: -1296219164641861579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG-Cards-Disables-And-Back_2
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 151
+        width: 82
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dc699fac005db890800000000000000
+      internalID: -7440702993930294058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG-Cards-Disables-And-Back_3
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 151
+        width: 82
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14e646a72cc023510800000000000000
+      internalID: 1527297253048610369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG-Cards-Disables-And-Back_4
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 151
+        width: 82
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc2d955219fa6f590800000000000000
+      internalID: -7640726679855705393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG-Cards-Disables-And-Back_5
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 151
+        width: 82
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbf6b747069801b00800000000000000
+      internalID: 797288181408690108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG-Cards-Disables-And-Back_6
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 151
+        width: 82
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feef05925edbefa40800000000000000
+      internalID: 5403965394829508335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG-Cards-Disables-And-Back_7
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 151
+        width: 82
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a1facd6dce34c780800000000000000
+      internalID: -8663730731122757209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG-Cards-Disables-And-Back_8
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 151
+        width: 82
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2d83753ae71f6880800000000000000
+      internalID: -8615641267449918166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG-Cards-Disables-And-Back_9
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 151
+        width: 82
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0401047d0f9f69340800000000000000
+      internalID: 4870354859846537280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG-Cards-Disables-And-Back_10
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 151
+        width: 82
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f22ccfa37ea397f70800000000000000
+      internalID: 9185437679800336943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG-Cards-Disables-And-Back_11
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 151
+        width: 82
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ade438969583123e0800000000000000
+      internalID: -2080319596195000614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG-Cards-Disables-And-Back_12
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 151
+        width: 82
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f279b7e575f9ff450800000000000000
+      internalID: 6124789215843292975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG-Cards-Disables-And-Back_13
+      rect:
+        serializedVersion: 2
+        x: 1263
+        y: 151
+        width: 82
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72adb6bbe25a3e620800000000000000
+      internalID: 2802265013286066727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG-Cards-Disables-And-Back_14
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 151
+        width: 82
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c942e0b52c7c1720800000000000000
+      internalID: 2818263968150342086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG-Cards-Disables-And-Back_15
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 7
+        width: 82
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24d2c79a1b00fb280800000000000000
+      internalID: -9025494365174485694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG-Cards-Disables-And-Back_16
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 7
+        width: 82
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51427fafa5a36f8c0800000000000000
+      internalID: -3965918259421174763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG-Cards-Disables-And-Back_17
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 7
+        width: 82
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 023868e6045567c20800000000000000
+      internalID: 3203841920141263648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG-Cards-Disables-And-Back_18
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 7
+        width: 82
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b320b06ccb23576a0800000000000000
+      internalID: -6452195104780516805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG-Cards-Disables-And-Back_19
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 7
+        width: 82
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8832adbddfb523b80800000000000000
+      internalID: -8416563607728675960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG-Cards-Disables-And-Back_20
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 7
+        width: 82
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 282580b7a13bb7170800000000000000
+      internalID: 8177326474735932034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG-Cards-Disables-And-Back_21
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 7
+        width: 82
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1c505485a5e35220800000000000000
+      internalID: 2473573119408757786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG-Cards-Disables-And-Back_22
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 7
+        width: 82
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f352cf2c87159c0d0800000000000000
+      internalID: -3402098464392469185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG-Cards-Disables-And-Back_23
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 7
+        width: 82
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a87f0a8a416e95ec0800000000000000
+      internalID: -3577575452566292598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

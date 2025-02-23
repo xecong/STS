@@ -1,0 +1,1630 @@
+fileFormatVersion: 2
+guid: 39d1499e0e72e554dada885315f59f99
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 583102726572989147
+    second: UI_Banners_0
+  - first:
+      213: -8431323041197874319
+    second: UI_Banners_1
+  - first:
+      213: -4814647624393845997
+    second: UI_Banners_2
+  - first:
+      213: -3431532931585686483
+    second: UI_Banners_3
+  - first:
+      213: 3349651572466333603
+    second: UI_Banners_4
+  - first:
+      213: 7803315293250667612
+    second: UI_Banners_5
+  - first:
+      213: -4366253659118170430
+    second: UI_Banners_6
+  - first:
+      213: 7324411022854091772
+    second: UI_Banners_7
+  - first:
+      213: -3807903618940560003
+    second: UI_Banners_8
+  - first:
+      213: -4725885473126298283
+    second: UI_Banners_9
+  - first:
+      213: -2958382291838534045
+    second: UI_Banners_10
+  - first:
+      213: 1358488834758166657
+    second: UI_Banners_11
+  - first:
+      213: 5806080251658820475
+    second: UI_Banners_12
+  - first:
+      213: -2024419093550375182
+    second: UI_Banners_13
+  - first:
+      213: 1698698765353533905
+    second: UI_Banners_14
+  - first:
+      213: 9034022383180624243
+    second: UI_Banners_15
+  - first:
+      213: -1506704619918947579
+    second: UI_Banners_16
+  - first:
+      213: -8227393803882624587
+    second: UI_Banners_17
+  - first:
+      213: -5997417475854506818
+    second: UI_Banners_18
+  - first:
+      213: 7392756354653286637
+    second: UI_Banners_19
+  - first:
+      213: -4030176441874022647
+    second: UI_Banners_20
+  - first:
+      213: 7933292130139968388
+    second: UI_Banners_21
+  - first:
+      213: -472431111391887410
+    second: UI_Banners_22
+  - first:
+      213: -5903333850575536295
+    second: UI_Banners_23
+  - first:
+      213: -5722280361460763328
+    second: UI_Banners_24
+  - first:
+      213: -5867833546477889345
+    second: UI_Banners_25
+  - first:
+      213: -3703211181229019291
+    second: UI_Banners_26
+  - first:
+      213: 6502668843287990509
+    second: UI_Banners_27
+  - first:
+      213: -6111422114744580805
+    second: UI_Banners_28
+  - first:
+      213: -8415014280791512551
+    second: UI_Banners_29
+  - first:
+      213: 5602216871702454831
+    second: UI_Banners_30
+  - first:
+      213: -2578342127358341935
+    second: UI_Banners_31
+  - first:
+      213: 5410537923147683756
+    second: UI_Banners_32
+  - first:
+      213: -5371135794174682662
+    second: UI_Banners_33
+  - first:
+      213: 3624941598346573184
+    second: UI_Banners_34
+  - first:
+      213: 816987841057084083
+    second: UI_Banners_35
+  - first:
+      213: 8667126826720887123
+    second: UI_Banners_36
+  - first:
+      213: 8093261389343230213
+    second: UI_Banners_37
+  - first:
+      213: -7337376115197726881
+    second: UI_Banners_38
+  - first:
+      213: -2931277019210925693
+    second: UI_Banners_39
+  - first:
+      213: 6360359145488168795
+    second: UI_Banners_40
+  - first:
+      213: 7942395295506285737
+    second: UI_Banners_41
+  - first:
+      213: -441946626488734539
+    second: UI_Banners_42
+  - first:
+      213: 8513254246924731862
+    second: UI_Banners_43
+  - first:
+      213: 6932109292809001713
+    second: UI_Banners_44
+  - first:
+      213: 4893788475393565502
+    second: UI_Banners_45
+  - first:
+      213: 944865866976480113
+    second: UI_Banners_46
+  - first:
+      213: -56441295973526504
+    second: UI_Banners_47
+  - first:
+      213: -9173228855856592312
+    second: UI_Banners_48
+  - first:
+      213: 7327001906910182062
+    second: UI_Banners_49
+  - first:
+      213: -1988989970340549508
+    second: UI_Banners_50
+  - first:
+      213: -3304242022874409331
+    second: UI_Banners_51
+  - first:
+      213: 3977133112263018917
+    second: UI_Banners_52
+  - first:
+      213: -8683349895115156573
+    second: UI_Banners_53
+  - first:
+      213: -5108639247053005764
+    second: UI_Banners_54
+  - first:
+      213: -6481423930392191744
+    second: UI_Banners_55
+  - first:
+      213: -5547917450772974164
+    second: UI_Banners_56
+  - first:
+      213: 7504116724258284360
+    second: UI_Banners_57
+  - first:
+      213: -668503472893387631
+    second: UI_Banners_58
+  - first:
+      213: 4721554418282807279
+    second: UI_Banners_59
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: UI_Banners_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 271
+        width: 162
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdad1f427d8971800800000000000000
+      internalID: 583102726572989147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_1
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 271
+        width: 162
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 173a5d67d5cedfa80800000000000000
+      internalID: -8431323041197874319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_2
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 271
+        width: 162
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3139355ae7fee2db0800000000000000
+      internalID: -4814647624393845997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_3
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 271
+        width: 162
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d24c7c1dafeb060d0800000000000000
+      internalID: -3431532931585686483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_4
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 271
+        width: 162
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a73f22ab5a5c7e20800000000000000
+      internalID: 3349651572466333603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_5
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 271
+        width: 162
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c54449c5ae1fa4c60800000000000000
+      internalID: 7803315293250667612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_6
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 271
+        width: 162
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ce03013e63f763c0800000000000000
+      internalID: -4366253659118170430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_7
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 271
+        width: 162
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf37c26d40985a560800000000000000
+      internalID: 7324411022854091772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_8
+      rect:
+        serializedVersion: 2
+        x: 1423
+        y: 271
+        width: 162
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7d9f1e65db972bc0800000000000000
+      internalID: -3807903618940560003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_9
+      rect:
+        serializedVersion: 2
+        x: 1615
+        y: 271
+        width: 162
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55dc02573384a6eb0800000000000000
+      internalID: -4725885473126298283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_10
+      rect:
+        serializedVersion: 2
+        x: 1807
+        y: 271
+        width: 162
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36e7821daf6b1f6d0800000000000000
+      internalID: -2958382291838534045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_11
+      rect:
+        serializedVersion: 2
+        x: 1983
+        y: 271
+        width: 162
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 188481bc5625ad210800000000000000
+      internalID: 1358488834758166657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_12
+      rect:
+        serializedVersion: 2
+        x: 2159
+        y: 271
+        width: 162
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7bd8891a37539050800000000000000
+      internalID: 5806080251658820475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_13
+      rect:
+        serializedVersion: 2
+        x: 2335
+        y: 271
+        width: 162
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fe596c6f81d7e3e0800000000000000
+      internalID: -2024419093550375182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_14
+      rect:
+        serializedVersion: 2
+        x: 2511
+        y: 271
+        width: 162
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d1ca49e68df29710800000000000000
+      internalID: 1698698765353533905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_15
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 127
+        width: 162
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 371b8624e7b4f5d70800000000000000
+      internalID: 9034022383180624243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_16
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 127
+        width: 162
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50b8a4c812c171be0800000000000000
+      internalID: -1506704619918947579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_17
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 127
+        width: 162
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b9835c0dec62dd80800000000000000
+      internalID: -8227393803882624587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_18
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 127
+        width: 162
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb4e8f5d494e4cca0800000000000000
+      internalID: -5997417475854506818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_19
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 127
+        width: 162
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de0fe1e6cb8589660800000000000000
+      internalID: 7392756354653286637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_20
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 127
+        width: 162
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90f73fff0efe118c0800000000000000
+      internalID: -4030176441874022647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_21
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 127
+        width: 162
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4831564f827b81e60800000000000000
+      internalID: 7933292130139968388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_22
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 127
+        width: 162
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecfb4a048669179f0800000000000000
+      internalID: -472431111391887410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_23
+      rect:
+        serializedVersion: 2
+        x: 1423
+        y: 127
+        width: 162
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95ff7edd325231ea0800000000000000
+      internalID: -5903333850575536295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_24
+      rect:
+        serializedVersion: 2
+        x: 1615
+        y: 127
+        width: 162
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 045ffe544506690b0800000000000000
+      internalID: -5722280361460763328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_25
+      rect:
+        serializedVersion: 2
+        x: 1807
+        y: 127
+        width: 162
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb890158a74419ea0800000000000000
+      internalID: -5867833546477889345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_26
+      rect:
+        serializedVersion: 2
+        x: 1983
+        y: 127
+        width: 162
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56fe6961d0d8b9cc0800000000000000
+      internalID: -3703211181229019291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_27
+      rect:
+        serializedVersion: 2
+        x: 2159
+        y: 127
+        width: 162
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de05e204cde1e3a50800000000000000
+      internalID: 6502668843287990509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_28
+      rect:
+        serializedVersion: 2
+        x: 2335
+        y: 127
+        width: 162
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b35ce2267fddf2ba0800000000000000
+      internalID: -6111422114744580805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_29
+      rect:
+        serializedVersion: 2
+        x: 2511
+        y: 127
+        width: 162
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91a2595a81dd73b80800000000000000
+      internalID: -8415014280791512551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_30
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 79
+        width: 114
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f22668020921fbd40800000000000000
+      internalID: 5602216871702454831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_31
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 79
+        width: 114
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dc816dee73e73cd0800000000000000
+      internalID: -2578342127358341935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_32
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 79
+        width: 114
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca75ff82397161b40800000000000000
+      internalID: 5410537923147683756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_33
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 79
+        width: 114
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad915d3e374e575b0800000000000000
+      internalID: -5371135794174682662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_34
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 79
+        width: 114
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 085fbfc8d216e4230800000000000000
+      internalID: 3624941598346573184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_35
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 79
+        width: 114
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b25504ec16865b00800000000000000
+      internalID: 816987841057084083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_36
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 79
+        width: 114
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35105f1bde1d74870800000000000000
+      internalID: 8667126826720887123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_37
+      rect:
+        serializedVersion: 2
+        x: 1271
+        y: 79
+        width: 114
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 509003a8a5a015070800000000000000
+      internalID: 8093261389343230213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_38
+      rect:
+        serializedVersion: 2
+        x: 1447
+        y: 79
+        width: 114
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5f243e5c476c2a90800000000000000
+      internalID: -7337376115197726881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_39
+      rect:
+        serializedVersion: 2
+        x: 1639
+        y: 79
+        width: 114
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 389baa3e4130257d0800000000000000
+      internalID: -2931277019210925693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_40
+      rect:
+        serializedVersion: 2
+        x: 1831
+        y: 79
+        width: 114
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b57bab6b1f8844850800000000000000
+      internalID: 6360359145488168795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_41
+      rect:
+        serializedVersion: 2
+        x: 2007
+        y: 79
+        width: 114
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a4c26ec07e093e60800000000000000
+      internalID: 7942395295506285737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_42
+      rect:
+        serializedVersion: 2
+        x: 2183
+        y: 79
+        width: 114
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bce47e72e3edd9f0800000000000000
+      internalID: -441946626488734539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_43
+      rect:
+        serializedVersion: 2
+        x: 2359
+        y: 79
+        width: 114
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d5c886e1a7252670800000000000000
+      internalID: 8513254246924731862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_44
+      rect:
+        serializedVersion: 2
+        x: 2535
+        y: 79
+        width: 114
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fa90168cacc33060800000000000000
+      internalID: 6932109292809001713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_45
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 15
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e33ebb1a0ba3ae340800000000000000
+      internalID: 4893788475393565502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_46
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 15
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17b4689ff76dc1d00800000000000000
+      internalID: 944865866976480113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_47
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 15
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 814d5dab0fa773ff0800000000000000
+      internalID: -56441295973526504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_48
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 15
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84a0e4b15f422b080800000000000000
+      internalID: -9173228855856592312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_49
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 15
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaabdf90a6dbea560800000000000000
+      internalID: 7327001906910182062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_50
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 15
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7c690cf820b564e0800000000000000
+      internalID: -1988989970340549508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_51
+      rect:
+        serializedVersion: 2
+        x: 1132
+        y: 15
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8617a60369f422d0800000000000000
+      internalID: -3304242022874409331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_52
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 15
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a981ec6e7d913730800000000000000
+      internalID: 3977133112263018917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_53
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 15
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a35c39d64b8e7780800000000000000
+      internalID: -8683349895115156573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_54
+      rect:
+        serializedVersion: 2
+        x: 1676
+        y: 15
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3c59c9eba77a19b0800000000000000
+      internalID: -5108639247053005764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_55
+      rect:
+        serializedVersion: 2
+        x: 1868
+        y: 15
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00dd14e764b5d06a0800000000000000
+      internalID: -6481423930392191744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_56
+      rect:
+        serializedVersion: 2
+        x: 2044
+        y: 15
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca57c7ff876d103b0800000000000000
+      internalID: -5547917450772974164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_57
+      rect:
+        serializedVersion: 2
+        x: 2220
+        y: 15
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 843ab76f66af32860800000000000000
+      internalID: 7504116724258284360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_58
+      rect:
+        serializedVersion: 2
+        x: 2396
+        y: 15
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19c131f12aff8b6f0800000000000000
+      internalID: -668503472893387631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Banners_59
+      rect:
+        serializedVersion: 2
+        x: 2572
+        y: 15
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fef3c614ab4568140800000000000000
+      internalID: 4721554418282807279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

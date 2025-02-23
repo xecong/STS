@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Test3
   m_EditorClassIdentifier: 
   cardName: Test3
-  cardImage: {fileID: -3801212878339093534, guid: 2008b810f8f41e948a08b048cbc8a30a, type: 3}
-  description: Test Three
+  cardImage: {fileID: -2002438998695608467, guid: 99784b2f08e19594289ac9f1860a3b84, type: 3}
+  CardDescription: Test333

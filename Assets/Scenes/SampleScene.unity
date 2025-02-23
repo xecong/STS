@@ -452,6 +452,7 @@ GameObject:
   - component: {fileID: 244377177}
   - component: {fileID: 244377179}
   - component: {fileID: 244377178}
+  - component: {fileID: 244377180}
   m_Layer: 5
   m_Name: Card Panel
   m_TagString: Untagged
@@ -516,6 +517,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 244377176}
   m_CullTransparentMesh: 1
+--- !u!114 &244377180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244377176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 4
+  m_Spacing: 10
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &304027720
 GameObject:
   m_ObjectHideFlags: 0
@@ -1462,9 +1489,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnIndicator: {fileID: 466973138}
   playerHand: {fileID: 1393109151}
-  enemyHand: {fileID: 0}
+  enemyHand: {fileID: 1393109151}
   playerHealth: {fileID: 1979663334}
   enemyHealth: {fileID: 1467565478}
+  handManager: {fileID: 1393109151}
 --- !u!4 &842347772
 Transform:
   m_ObjectHideFlags: 0
@@ -1860,7 +1888,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1854197225027947347, guid: e8b59b271f8641e48a4d7775d661612c, type: 3}
+  m_Sprite: {fileID: -2002438998695608467, guid: 99784b2f08e19594289ac9f1860a3b84, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2143,7 +2171,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1854197225027947347, guid: e8b59b271f8641e48a4d7775d661612c, type: 3}
+  m_Sprite: {fileID: -3449010108070180786, guid: 99784b2f08e19594289ac9f1860a3b84, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2510,6 +2538,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   handCards: []
   graveyard: []
+  cardPrefab: {fileID: 6554320573261662372, guid: cfa88b4b495a72244bc11dcf2119a993, type: 3}
+  cardPanel: {fileID: 244377177}
 --- !u!4 &1393109152
 Transform:
   m_ObjectHideFlags: 0
@@ -2858,7 +2888,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1854197225027947347, guid: e8b59b271f8641e48a4d7775d661612c, type: 3}
+  m_Sprite: {fileID: -7132410542676258300, guid: 99784b2f08e19594289ac9f1860a3b84, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2910,7 +2940,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fdc88e9918065fe439e1c55ae8bf6cd1, type: 2}
   - {fileID: 11400000, guid: e429da32239f11f449f93fa817f02160, type: 2}
   selectedDeck: []
-  cardSelectionPanel: {fileID: 244377176}
+  cardSelectionPanel: {fileID: 1334368583}
   playerHand: {fileID: 1393109151}
   playerDeck: {fileID: 724290762}
   startGameButton: {fileID: 2105294787}

@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
 
     public PlayerHealth playerHealth;
     public EnemyHealth enemyHealth;
-
+	public HandManager handManager;
 
     private void Awake()
     {
@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
         // 🔹 HandManager 자동 할당 추가
         if (playerHand == null)
         {
-            playerHand = FindObjectOfType<HandManager>();
+            playerHand = FindFirstObjectByType<HandManager>();
             if (playerHand == null)
             {
                 Debug.LogError("❌ playerHand를 찾을 수 없습니다! HandManager가 씬에 있는지 확인하세요.");
@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
 
         if (enemyHand == null)
         {
-            enemyHand = FindObjectOfType<HandManager>();
+            enemyHand = FindFirstObjectByType<HandManager>();
             if (enemyHand == null)
             {
                 Debug.LogError("❌ enemyHand를 찾을 수 없습니다! HandManager가 씬에 있는지 확인하세요.");
@@ -75,41 +75,71 @@ public class GameManager : MonoBehaviour
     }
 
 
-    private void StartPlayerTurn()
-    {
-        currentTurn = TurnState.PlayerTurn;
-        Debug.Log("▶ 플레이어 턴 시작!");
-        UpdateTurnUI(); // 🔹 UI 업데이트 추가
+	private void StartPlayerTurn()
+	{
+		currentTurn = TurnState.PlayerTurn;
+		Debug.Log("▶ 플레이어 턴 시작!");
+		UpdateTurnUI();
 
+		if (playerHand == null)
+		{
+			Debug.LogError("❌ playerHand가 null입니다! HandManager가 씬에 있는지 확인하세요.");
+			return;
+		}
 
-        if (playerHand == null)
-        {
-            Debug.LogError("❌ playerHand가 null입니다! HandManager가 씬에 있는지 확인하세요.");
-            return;
-        }
+		if (DeckManager.Instance == null)
+		{
+			Debug.LogError("❌ DeckManager.Instance가 null입니다! DeckManager가 씬에 있는지 확인하세요.");
+			return;
+		}
 
-        if (DeckManager.Instance == null)
-        {
-            Debug.LogError("❌ DeckManager.Instance가 null입니다! DeckManager가 씬에 있는지 확인하세요.");
-            return;
-        }
+		int drawAmount = 5; // 기본적으로 뽑을 카드 개수
+		List<CardData> drawnCards = new List<CardData>();
+		
+		if (drawnCards.Count > 0)
+		{
+			playerHand.DrawCards(drawnCards);
+			StartCoroutine(playerHand.PlayHand()); // 핸드에 카드가 있는 경우만 실행
+		}
+		else
+		{
+			Debug.LogWarning("⚠️ 뽑을 카드가 없어서 턴이 진행되지 않습니다.");
+			EndPlayerTurn();
+		}
 
-        if (DeckManager.Instance.deck.Count == 0)
-        {
-            Debug.Log("🔄 덱이 비어 있습니다. 묘지에서 덱을 다시 채웁니다.");
-            DeckManager.Instance.RefillDeckFromGraveyard();
-        }
+		// 🔥 현재 덱에서 뽑을 수 있는 만큼 뽑기
+		int availableCards = DeckManager.Instance.deck.Count;
+		if (availableCards > 0)
+		{
+			int drawNow = Mathf.Min(drawAmount, availableCards);
+			drawnCards.AddRange(DeckManager.Instance.DrawCards(drawNow));
+			drawAmount -= drawNow;
+		}
 
-        int drawAmount = Mathf.Min(5, DeckManager.Instance.deck.Count);
-        if (drawAmount == 0)
-        {
-            Debug.LogError("❌ 덱이 비어 있어서 카드를 뽑을 수 없습니다!");
-            return;
-        }
+		// 🔄 덱이 부족하면 묘지를 셔플하고 다시 보충한 후 남은 카드 뽑기
+		if (drawAmount > 0 && DeckManager.Instance.graveyard.Count > 0)
+		{
+			Debug.Log("🔄 덱이 부족! 묘지를 셔플하여 덱을 다시 생성합니다.");
+			DeckManager.Instance.RefillDeckFromGraveyard();
 
-        playerHand.DrawCards(DeckManager.Instance.DrawCards(drawAmount));
-        StartCoroutine(PlayCards(playerHand, EndPlayerTurn));
-    }
+			// 🔥 다시 덱에서 남은 카드 뽑기
+			int drawNow = Mathf.Min(drawAmount, DeckManager.Instance.deck.Count);
+			drawnCards.AddRange(DeckManager.Instance.DrawCards(drawNow));
+		}
+
+		// 🔥 실제로 뽑은 카드가 있으면 핸드에 추가
+		if (drawnCards.Count > 0)
+		{
+			playerHand.DrawCards(drawnCards);
+			StartCoroutine(PlayCards(playerHand, EndPlayerTurn));
+		}
+		else
+		{
+			Debug.LogWarning("⚠️ 뽑을 카드가 없어서 턴이 진행되지 않습니다.");
+			EndPlayerTurn();
+		}
+	}
+
 
 
     public void EndPlayerTurn()
@@ -134,19 +164,22 @@ public class GameManager : MonoBehaviour
         StartPlayerTurn();
     }
 
-    private IEnumerator PlayCards(HandManager hand, System.Action onTurnEnd)
-    {
-        while (hand.HasCards())
-        {
-            CardData card = hand.UseNextCard();
-            if (card != null)
-            {
-                Debug.Log($"🃏 {card.cardName} 사용됨!");
-                yield return new WaitForSeconds(0.5f);
-            }
-        }
-        onTurnEnd.Invoke();
-    }
+	private IEnumerator PlayCards(HandManager hand, System.Action onTurnEnd)
+	{
+		while (hand.HasCards())
+		{
+			GameObject cardObject = hand.GetFirstCardObject(); // 🔥 UI 오브젝트 가져오기
+			CardData card = hand.UseNextCard(cardObject); // 🔥 카드 사용 시 UI 오브젝트 전달
+
+			if (card != null)
+			{
+				Debug.Log($"🃏 {card.cardName} 사용됨!");
+				yield return new WaitForSeconds(0.5f);
+			}
+		}
+		onTurnEnd.Invoke();
+	}
+
     public void DealDamageToEnemy(int damage)
     {
         if (enemyHealth != null)

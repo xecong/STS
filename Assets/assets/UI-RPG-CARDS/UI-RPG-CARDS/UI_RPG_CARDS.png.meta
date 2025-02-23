@@ -1,0 +1,2030 @@
+fileFormatVersion: 2
+guid: 9cd657f14bdcb3d4ea7fd8d6b5c985af
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8074308916204088297
+    second: UI_RPG_CARDS_0
+  - first:
+      213: -5615575000607380861
+    second: UI_RPG_CARDS_1
+  - first:
+      213: 7558926958058155313
+    second: UI_RPG_CARDS_2
+  - first:
+      213: 5872030824563631616
+    second: UI_RPG_CARDS_3
+  - first:
+      213: 4117271627961505600
+    second: UI_RPG_CARDS_4
+  - first:
+      213: 4855222305908993238
+    second: UI_RPG_CARDS_5
+  - first:
+      213: -5161458512681973872
+    second: UI_RPG_CARDS_6
+  - first:
+      213: -757442807193533930
+    second: UI_RPG_CARDS_7
+  - first:
+      213: -155751072611557658
+    second: UI_RPG_CARDS_8
+  - first:
+      213: -1032321429917253257
+    second: UI_RPG_CARDS_9
+  - first:
+      213: -1679335271367720050
+    second: UI_RPG_CARDS_10
+  - first:
+      213: -4768014563678045743
+    second: UI_RPG_CARDS_11
+  - first:
+      213: 4193905659622760163
+    second: UI_RPG_CARDS_12
+  - first:
+      213: 3642239326161808834
+    second: UI_RPG_CARDS_13
+  - first:
+      213: -1774220505463024682
+    second: UI_RPG_CARDS_14
+  - first:
+      213: -5854062585451415855
+    second: UI_RPG_CARDS_15
+  - first:
+      213: 4063475126884394673
+    second: UI_RPG_CARDS_16
+  - first:
+      213: 2219238185836981853
+    second: UI_RPG_CARDS_17
+  - first:
+      213: -8604128761155955010
+    second: UI_RPG_CARDS_18
+  - first:
+      213: 3318979704898419947
+    second: UI_RPG_CARDS_19
+  - first:
+      213: 9183299356423922176
+    second: UI_RPG_CARDS_20
+  - first:
+      213: -4703054829596366246
+    second: UI_RPG_CARDS_21
+  - first:
+      213: 1610819271437317631
+    second: UI_RPG_CARDS_22
+  - first:
+      213: 8041149901781109878
+    second: UI_RPG_CARDS_23
+  - first:
+      213: -3712661124203335018
+    second: UI_RPG_CARDS_24
+  - first:
+      213: 4326184746155638353
+    second: UI_RPG_CARDS_25
+  - first:
+      213: 2509011389018985607
+    second: UI_RPG_CARDS_26
+  - first:
+      213: 3594518788596252440
+    second: UI_RPG_CARDS_27
+  - first:
+      213: -8827686125576196570
+    second: UI_RPG_CARDS_28
+  - first:
+      213: -3190234340639375210
+    second: UI_RPG_CARDS_29
+  - first:
+      213: -4750560573618606677
+    second: UI_RPG_CARDS_30
+  - first:
+      213: 4107116041052072867
+    second: UI_RPG_CARDS_31
+  - first:
+      213: 8713141088991989053
+    second: UI_RPG_CARDS_32
+  - first:
+      213: 7802956486436710353
+    second: UI_RPG_CARDS_33
+  - first:
+      213: 7542910773484491095
+    second: UI_RPG_CARDS_34
+  - first:
+      213: 3805238560080734795
+    second: UI_RPG_CARDS_35
+  - first:
+      213: -1329163361288047883
+    second: UI_RPG_CARDS_36
+  - first:
+      213: 6573164310087331267
+    second: UI_RPG_CARDS_37
+  - first:
+      213: -8143213209514924227
+    second: UI_RPG_CARDS_38
+  - first:
+      213: 4123009509245363565
+    second: UI_RPG_CARDS_39
+  - first:
+      213: 8704757724766039555
+    second: UI_RPG_CARDS_40
+  - first:
+      213: -1742791274555451769
+    second: UI_RPG_CARDS_41
+  - first:
+      213: -6787502067300266425
+    second: UI_RPG_CARDS_42
+  - first:
+      213: 5175256081172041539
+    second: UI_RPG_CARDS_43
+  - first:
+      213: -7906588594801407208
+    second: UI_RPG_CARDS_44
+  - first:
+      213: -2716471464845545221
+    second: UI_RPG_CARDS_45
+  - first:
+      213: 6134921113553963301
+    second: UI_RPG_CARDS_46
+  - first:
+      213: 4678260716312498549
+    second: UI_RPG_CARDS_47
+  - first:
+      213: -7418263307668437830
+    second: UI_RPG_CARDS_48
+  - first:
+      213: -7916433250355069523
+    second: UI_RPG_CARDS_49
+  - first:
+      213: 3004674896580645510
+    second: UI_RPG_CARDS_50
+  - first:
+      213: 9088035505973477298
+    second: UI_RPG_CARDS_51
+  - first:
+      213: 6679857429497630640
+    second: UI_RPG_CARDS_52
+  - first:
+      213: -2476173205981386435
+    second: UI_RPG_CARDS_53
+  - first:
+      213: 8570198856453173610
+    second: UI_RPG_CARDS_54
+  - first:
+      213: -8300550551765065004
+    second: UI_RPG_CARDS_55
+  - first:
+      213: -2202736837656165531
+    second: UI_RPG_CARDS_56
+  - first:
+      213: 8241265344592204468
+    second: UI_RPG_CARDS_57
+  - first:
+      213: 3337045397842432421
+    second: UI_RPG_CARDS_58
+  - first:
+      213: -6179789636269494780
+    second: UI_RPG_CARDS_59
+  - first:
+      213: 8831739977397751487
+    second: UI_RPG_CARDS_60
+  - first:
+      213: 1750214239626890016
+    second: UI_RPG_CARDS_61
+  - first:
+      213: 8095429169565785642
+    second: UI_RPG_CARDS_62
+  - first:
+      213: -6547489642497712821
+    second: UI_RPG_CARDS_63
+  - first:
+      213: -3462710895325708154
+    second: UI_RPG_CARDS_64
+  - first:
+      213: -7010426231397516758
+    second: UI_RPG_CARDS_65
+  - first:
+      213: 7305152272153005144
+    second: UI_RPG_CARDS_66
+  - first:
+      213: 6890765003070725111
+    second: UI_RPG_CARDS_67
+  - first:
+      213: 4890648046817630584
+    second: UI_RPG_CARDS_68
+  - first:
+      213: 7821404155165491121
+    second: UI_RPG_CARDS_69
+  - first:
+      213: 3939034893410722558
+    second: UI_RPG_CARDS_70
+  - first:
+      213: -653895455551961480
+    second: UI_RPG_CARDS_71
+  - first:
+      213: -8042049250453518923
+    second: UI_RPG_CARDS_72
+  - first:
+      213: -3476936348685466691
+    second: UI_RPG_CARDS_73
+  - first:
+      213: 7606928253105123564
+    second: UI_RPG_CARDS_74
+  - first:
+      213: 7884214942184127781
+    second: UI_RPG_CARDS_75
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 467
+        width: 184
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eb2d150e25bd0070800000000000000
+      internalID: 8074308916204088297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_1
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 458
+        width: 114
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38aab3f1a487112b0800000000000000
+      internalID: -5615575000607380861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_2
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 471
+        width: 98
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13d2e2af404b6e860800000000000000
+      internalID: 7558926958058155313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_3
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 470
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00662407ce4ad7150800000000000000
+      internalID: 5872030824563631616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_4
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 471
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 047907c3bbc732930800000000000000
+      internalID: 4117271627961505600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_5
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 471
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dc224196f6316340800000000000000
+      internalID: 4855222305908993238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_6
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 471
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 097ccac44d0de58b0800000000000000
+      internalID: -5161458512681973872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_7
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 471
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6120e8ba7c50d75f0800000000000000
+      internalID: -757442807193533930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_8
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 470
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ee1a938939a6ddf0800000000000000
+      internalID: -155751072611557658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_9
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 471
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77142c301257ca1f0800000000000000
+      internalID: -1032321429917253257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_10
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 471
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e83c75bd77dc1b8e0800000000000000
+      internalID: -1679335271367720050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_11
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 471
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d9b410340c94ddb0800000000000000
+      internalID: -4768014563678045743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_12
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 471
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ee90572afeb33a30800000000000000
+      internalID: 4193905659622760163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_13
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 451
+        width: 114
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cd25d6ae55db8230800000000000000
+      internalID: 3642239326161808834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_14
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 455
+        width: 98
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d399aab9d3b067e0800000000000000
+      internalID: -1774220505463024682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_15
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 456
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d6734d381132cea0800000000000000
+      internalID: -5854062585451415855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_16
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 454
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b66493491d546830800000000000000
+      internalID: 4063475126884394673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_17
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 454
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5eabca3f515cce10800000000000000
+      internalID: 2219238185836981853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_18
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 454
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb6d3957a7ef79880800000000000000
+      internalID: -8604128761155955010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_19
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 454
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bec7337f4726f0e20800000000000000
+      internalID: 3318979704898419947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_20
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 456
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 002a8b50c12a17f70800000000000000
+      internalID: 9183299356423922176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_21
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 454
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5a29b2ec846bbeb0800000000000000
+      internalID: -4703054829596366246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_22
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 454
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff5ff57c797ca5610800000000000000
+      internalID: 1610819271437317631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_23
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 454
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67c84595b37e79f60800000000000000
+      internalID: 8041149901781109878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_24
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 454
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6923578c06af97cc0800000000000000
+      internalID: -3712661124203335018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_25
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 435
+        width: 66
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15ef1530b12b90c30800000000000000
+      internalID: 4326184746155638353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_26
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 426
+        width: 54
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 784d2e3a09cc1d220800000000000000
+      internalID: 2509011389018985607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_27
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 440
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81f3fbc2bcb42e130800000000000000
+      internalID: 3594518788596252440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_28
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 439
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62ee2686d32cd7580800000000000000
+      internalID: -8827686125576196570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_29
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 439
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69000ff05c20ab3d0800000000000000
+      internalID: -3190234340639375210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_30
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 438
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: badac7de35e921eb0800000000000000
+      internalID: -4750560573618606677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_31
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 439
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aba73667486ff830800000000000000
+      internalID: 4107116041052072867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_32
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 440
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3d4a3ff7ab4be870800000000000000
+      internalID: 8713141088991989053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_33
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 439
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d7e3e3259ba94c60800000000000000
+      internalID: 7802956486436710353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_34
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 439
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 751920a626dcda860800000000000000
+      internalID: 7542910773484491095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_35
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 438
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4a2b333f4ceec430800000000000000
+      internalID: 3805238560080734795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_36
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 439
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f236f117fcdd8de0800000000000000
+      internalID: -1329163361288047883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_37
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 259
+        width: 386
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cde7092d12983b50800000000000000
+      internalID: 6573164310087331267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_38
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 383
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3728940bbe7dfe80800000000000000
+      internalID: -8143213209514924227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_39
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 383
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d65a024dd4fd73930800000000000000
+      internalID: 4123009509245363565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_40
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 351
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30e6488e7038dc870800000000000000
+      internalID: 8704757724766039555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_41
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 351
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 786d87ac19c50d7e0800000000000000
+      internalID: -1742791274555451769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_42
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 319
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74e865ed4d2fdc1a0800000000000000
+      internalID: -6787502067300266425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_43
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 319
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34f80f37cf332d740800000000000000
+      internalID: 5175256081172041539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_44
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 319
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81b05bd5097264290800000000000000
+      internalID: -7906588594801407208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_45
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 319
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf0756f58972d4ad0800000000000000
+      internalID: -2716471464845545221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_46
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 319
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5298d62af3e932550800000000000000
+      internalID: 6134921113553963301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_47
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 227
+        width: 82
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5719872c5558ce040800000000000000
+      internalID: 4678260716312498549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_48
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 275
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab4cb1843d80d0990800000000000000
+      internalID: -7418263307668437830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_49
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 287
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dadbe70e6ed232290800000000000000
+      internalID: -7916433250355069523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_50
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 287
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 682193426efb2b920800000000000000
+      internalID: 3004674896580645510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_51
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 303
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bfbfa764203f1e70800000000000000
+      internalID: 9088035505973477298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_52
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 303
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bfc573d0fe93bc50800000000000000
+      internalID: 6679857429497630640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_53
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 303
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d39a327a69dd2add0800000000000000
+      internalID: -2476173205981386435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_54
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 287
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a61b95df3767fe670800000000000000
+      internalID: 8570198856453173610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_55
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 287
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d2eed950458ecc80800000000000000
+      internalID: -8300550551765065004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_56
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 287
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56346d9448e4e61e0800000000000000
+      internalID: -2202736837656165531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_57
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 255
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b2d724ba2bde5270800000000000000
+      internalID: 8241265344592204468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_58
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 255
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a110c1eb119f4e20800000000000000
+      internalID: 3337045397842432421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_59
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 271
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40e2487511afc3aa0800000000000000
+      internalID: -6179789636269494780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_60
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 271
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbec86587b4a09a70800000000000000
+      internalID: 8831739977397751487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_61
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 271
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02b8ac1f3920a4810800000000000000
+      internalID: 1750214239626890016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_62
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 51
+        width: 386
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2edd4430fdb85070800000000000000
+      internalID: 8095429169565785642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_63
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 67
+        width: 145
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4ddf583cd4a225a0800000000000000
+      internalID: -6547489642497712821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_64
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 66
+        width: 68
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6808c3479caf1ffc0800000000000000
+      internalID: -3462710895325708154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_65
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 163
+        width: 23
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2a78714c76f5be90800000000000000
+      internalID: -7010426231397516758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_66
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 163
+        width: 23
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85c41d3894d116560800000000000000
+      internalID: 7305152272153005144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_67
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 19
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fb59bee24ae0af50800000000000000
+      internalID: 6890765003070725111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_68
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 19
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 879d500ac721fd340800000000000000
+      internalID: 4890648046817630584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_69
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 19
+        width: 29
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bf3769b3a53b8c60800000000000000
+      internalID: 7821404155165491121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_70
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 19
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef26d9b9d534aa630800000000000000
+      internalID: 3939034893410722558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_71
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 19
+        width: 40
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87645933c85ece6f0800000000000000
+      internalID: -653895455551961480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_72
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 3
+        width: 162
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b58588b0d6e46090800000000000000
+      internalID: -8042049250453518923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_73
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 13
+        width: 98
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db385fdffc07fbfc0800000000000000
+      internalID: -3476936348685466691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_74
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 13
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce0b63661fc319960800000000000000
+      internalID: 7606928253105123564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RPG_CARDS_75
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 19
+        width: 66
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52d36b1b7bb5a6d60800000000000000
+      internalID: 7884214942184127781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
