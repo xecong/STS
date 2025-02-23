@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      WoodChest_Open8_0: 5026775537772402890
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

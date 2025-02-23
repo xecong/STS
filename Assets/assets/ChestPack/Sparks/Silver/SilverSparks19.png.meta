@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SilverSparks19_0: 209579140064084592
+      SilverSparks19_1: -4864809117580568590
+      SilverSparks19_2: 339398872083775467
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

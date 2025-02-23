@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      EmeraldSparks5_0: -4901891123651894791
+      EmeraldSparks5_1: 463505330034247872
+      EmeraldSparks5_2: -7993874065418141437
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -3,70 +3,30 @@ using UnityEngine;
 
 public class DeckManager : MonoBehaviour
 {
-    public static DeckManager Instance { get; private set; } // 싱글턴 인스턴스 추가
-
-    public List<CardData> deck = new List<CardData>();
-    public List<CardData> graveyard = new List<CardData>();
+    public static DeckManager Instance;
+    public List<Card> selectedDeck = new List<Card>(); // 플레이어가 선택한 덱 저장
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject); // 씬이 바뀌어도 유지
         }
         else
         {
-            Destroy(gameObject); // 중복 방지
+            Destroy(gameObject);
         }
     }
 
-    public void SetDeck(List<CardData> newDeck)
+    public void SetDeck(List<Card> deck)
     {
-        deck = new List<CardData>(newDeck);
+        selectedDeck = new List<Card>(deck); // 덱 저장
+        Debug.Log("Deck saved! Cards: " + string.Join(", ", selectedDeck));
     }
 
-    public void ShuffleDeck()
+    public List<Card> GetDeck()
     {
-        for (int i = 0; i < deck.Count; i++)
-        {
-            CardData temp = deck[i];
-            int randomIndex = Random.Range(i, deck.Count);
-            deck[i] = deck[randomIndex];
-            deck[randomIndex] = temp;
-        }
+        return selectedDeck; // 저장된 덱 반환
     }
-
-    public List<CardData> DrawCards(int count)
-    {
-        List<CardData> drawnCards = new List<CardData>();
-
-        for (int i = 0; i < count; i++)
-        {
-            if (deck.Count == 0)
-            {
-                if (graveyard.Count == 0) break;
-                RefillDeckFromGraveyard();
-            }
-
-            drawnCards.Add(deck[0]);
-            deck.RemoveAt(0);
-        }
-
-        return drawnCards;
-    }
-
-    public void RefillDeckFromGraveyard()
-    {
-        if (graveyard.Count == 0)
-        {
-            Debug.LogWarning("⚠️ 묘지가 비어 있어서 덱을 리필할 수 없습니다!");
-            return;
-        }
-
-        deck.AddRange(graveyard);
-        graveyard.Clear();
-        ShuffleDeck();
-        Debug.Log("✅ 묘지에서 덱을 다시 채웠습니다!");
-    }
-
 }

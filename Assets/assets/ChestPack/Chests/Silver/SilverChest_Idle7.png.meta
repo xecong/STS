@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SilverChest_Idle7_0: 6624726960323758841
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

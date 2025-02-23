@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      EmeraldChest_Idle3_0: 3392449108695196435
+      EmeraldChest_Idle3_1: 4724866893319438868
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

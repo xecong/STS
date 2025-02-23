@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      CopperChest_Open3_0: 1946903202716756185
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

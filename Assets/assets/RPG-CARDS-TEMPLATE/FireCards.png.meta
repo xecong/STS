@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      FireCards_0: 8705197143665835577
+      FireCards_1: 5708710484097288744
+      FireCards_2: -7938080357427253340
+      FireCards_3: -7488287150124317164
+      FireCards_4: 8545913930296350045
+      FireCards_5: 9167760467435151411
+      FireCards_6: -2246698961114965776
+      FireCards_7: 6357663385303456398
+      FireCards_8: -1439825858141381203
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

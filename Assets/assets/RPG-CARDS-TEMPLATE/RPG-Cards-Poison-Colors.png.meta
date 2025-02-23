@@ -322,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RPG-Cards-Poison-Colors_0: 5031014378543905349
+      RPG-Cards-Poison-Colors_1: 9103304213143033976
+      RPG-Cards-Poison-Colors_2: -5849491819532022680
+      RPG-Cards-Poison-Colors_3: -4846938690010585509
+      RPG-Cards-Poison-Colors_4: 1050595809446602047
+      RPG-Cards-Poison-Colors_5: -7062178854306197933
+      RPG-Cards-Poison-Colors_6: 7812358156768860968
+      RPG-Cards-Poison-Colors_7: -6445899116576737279
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

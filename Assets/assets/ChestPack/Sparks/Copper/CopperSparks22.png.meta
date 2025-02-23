@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      CopperSparks22_0: -6931475424834969925
+      CopperSparks22_1: -101266847888357454
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

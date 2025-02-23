@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SapphirChest_Idle21_0: 7582372048626750023
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

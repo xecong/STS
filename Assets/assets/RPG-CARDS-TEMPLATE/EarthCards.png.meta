@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      EarthCards_0: -3256265611220819903
+      EarthCards_1: 6999392107892561156
+      EarthCards_2: -2293671791888584304
+      EarthCards_3: -5111120269829213427
+      EarthCards_4: 6112149863558620119
+      EarthCards_5: 5223302023157319016
+      EarthCards_6: -8614087649705720301
+      EarthCards_7: -1782467558326644921
+      EarthCards_8: -4150313744035319490
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

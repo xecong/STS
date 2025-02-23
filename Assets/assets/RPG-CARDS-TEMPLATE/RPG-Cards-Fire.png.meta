@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RPG-Cards-Fire_0: 2494778670212705139
+      RPG-Cards-Fire_1: -8426298906608005384
+      RPG-Cards-Fire_2: -4922459722654002208
+      RPG-Cards-Fire_3: 86790308709525386
+      RPG-Cards-Fire_4: 5046040197886420434
+      RPG-Cards-Fire_5: 6860878483684962493
+      RPG-Cards-Fire_6: 8472335260087638979
+      RPG-Cards-Fire_7: -6879933642799725199
+      RPG-Cards-Fire_8: 7998829481687126326
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

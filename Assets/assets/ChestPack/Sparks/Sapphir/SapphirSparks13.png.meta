@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SapphirSparks13_0: 1368055633744706107
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

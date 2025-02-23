@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      WoodChest_Open12_0: -3427639200337241692
+      WoodChest_Open12_1: -7362863853697880483
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

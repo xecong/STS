@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DefenseCards_0: 3376516739274041490
+      DefenseCards_1: -6436255319789554786
+      DefenseCards_2: 7095885623573563492
+      DefenseCards_3: -1346481614451034770
+      DefenseCards_4: 6591793517016356388
+      DefenseCards_5: 5978671612278701353
+      DefenseCards_6: 5059709157926473864
+      DefenseCards_7: -166414560770035491
+      DefenseCards_8: -241559824683840269
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

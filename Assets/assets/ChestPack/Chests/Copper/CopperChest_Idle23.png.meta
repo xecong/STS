@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      CopperChest_Idle23_0: -6916185565284482786
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

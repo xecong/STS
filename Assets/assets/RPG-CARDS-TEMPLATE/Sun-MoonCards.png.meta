@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Sun-MoonCards_0: -7902669501280123807
+      Sun-MoonCards_1: -6555416224982186674
+      Sun-MoonCards_2: 1889269206060967423
+      Sun-MoonCards_3: 2002731472968384782
+      Sun-MoonCards_4: 6795949506345090482
+      Sun-MoonCards_5: -5002826166248591713
+      Sun-MoonCards_6: 3923404371381190159
+      Sun-MoonCards_7: -8710829085724264940
+      Sun-MoonCards_8: -3114545597272195394
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

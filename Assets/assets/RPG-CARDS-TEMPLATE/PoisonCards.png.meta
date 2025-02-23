@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PoisonCards_0: -3485194675969942494
+      PoisonCards_1: 4555841751965295172
+      PoisonCards_2: 9106319965603109506
+      PoisonCards_3: -3533463076972437305
+      PoisonCards_4: 8915161155903251851
+      PoisonCards_5: 654013257526622342
+      PoisonCards_6: -7629489188004551995
+      PoisonCards_7: 1524702075661095501
+      PoisonCards_8: -3689806687644064872
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

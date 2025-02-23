@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RPG-Cards-Earth_0: 8581825679296335596
+      RPG-Cards-Earth_1: -1478335505637197536
+      RPG-Cards-Earth_2: 1568777995695264302
+      RPG-Cards-Earth_3: 9141775855287185165
+      RPG-Cards-Earth_4: -7221835904277697423
+      RPG-Cards-Earth_5: 7172200415450527216
+      RPG-Cards-Earth_6: -4028072073716037446
+      RPG-Cards-Earth_7: 3019899622085441814
+      RPG-Cards-Earth_8: 7390038932403606201
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GoldSparks22_0: 7559629304238033512
+      GoldSparks22_1: 7762172087371621478
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

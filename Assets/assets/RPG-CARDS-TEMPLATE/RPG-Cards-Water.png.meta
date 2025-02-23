@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RPG-Cards-Water_0: 9068146406006821148
+      RPG-Cards-Water_1: 8875853006430866265
+      RPG-Cards-Water_2: 1475119734170107209
+      RPG-Cards-Water_3: -7821799900129194586
+      RPG-Cards-Water_4: -8551553956293572730
+      RPG-Cards-Water_5: 1622147579048574534
+      RPG-Cards-Water_6: 445282344390195445
+      RPG-Cards-Water_7: -4997557657099639989
+      RPG-Cards-Water_8: -5917932328545951471
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

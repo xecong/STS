@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      VoidCards_0: 5588827152738520936
+      VoidCards_1: 3704793928354756762
+      VoidCards_2: 107952246995269858
+      VoidCards_3: -5233238552785172651
+      VoidCards_4: -8368658613186328858
+      VoidCards_5: -2038424380782901327
+      VoidCards_6: 5789689209381614174
+      VoidCards_7: 2444087632277310847
+      VoidCards_8: -8247468167627293061
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

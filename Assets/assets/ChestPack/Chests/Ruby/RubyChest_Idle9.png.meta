@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RubyChest_Idle9_0: -5314453452808044206
+      RubyChest_Idle9_1: -4731081194125600790
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

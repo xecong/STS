@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RPG-Cards-Plant_0: 6102444296535360813
+      RPG-Cards-Plant_1: 7835124593521507444
+      RPG-Cards-Plant_2: 3864115657854579925
+      RPG-Cards-Plant_3: -8653837476674599842
+      RPG-Cards-Plant_4: -761354125431475254
+      RPG-Cards-Plant_5: 2446760854550318070
+      RPG-Cards-Plant_6: -1509416371756238919
+      RPG-Cards-Plant_7: 1684564147258476593
+      RPG-Cards-Plant_8: 7016593988295621149
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

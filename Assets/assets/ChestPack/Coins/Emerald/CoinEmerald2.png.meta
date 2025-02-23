@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      CoinEmerald2_0: 1990689894564782656
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

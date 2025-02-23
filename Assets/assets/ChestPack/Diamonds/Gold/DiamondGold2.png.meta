@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DiamondGold2_0: 1238610653781102469
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      EmeraldChest_Open16_0: -4238116950312072172
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

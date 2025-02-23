@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RPG-Cards-Sound_0: 414180705482622351
+      RPG-Cards-Sound_1: 8907809223781760196
+      RPG-Cards-Sound_2: 7893306958626511643
+      RPG-Cards-Sound_3: 7343856280831523812
+      RPG-Cards-Sound_4: 4207567318468704563
+      RPG-Cards-Sound_5: 8369321151011293027
+      RPG-Cards-Sound_6: 681708465023577480
+      RPG-Cards-Sound_7: 884863737082317911
+      RPG-Cards-Sound_8: 3086698601758506302
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

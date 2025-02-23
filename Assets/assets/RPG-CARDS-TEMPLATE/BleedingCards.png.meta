@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BleedingCards_0: 8447948602833387808
+      BleedingCards_1: -7147217315364083861
+      BleedingCards_2: 1399547590826502838
+      BleedingCards_3: -4195978576022947841
+      BleedingCards_4: 6148412879671848967
+      BleedingCards_5: 979867032355522661
+      BleedingCards_6: -7523778587554536391
+      BleedingCards_7: -6766035045031252239
+      BleedingCards_8: 1665284318720959112
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

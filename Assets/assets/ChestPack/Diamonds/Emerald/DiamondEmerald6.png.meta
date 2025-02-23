@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DiamondEmerald6_0: 8426265039028771155
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

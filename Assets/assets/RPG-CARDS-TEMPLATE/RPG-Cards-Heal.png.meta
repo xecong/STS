@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RPG-Cards-Heal_0: 8650202753014545145
+      RPG-Cards-Heal_1: -6186766650971529681
+      RPG-Cards-Heal_2: -5938181243687326093
+      RPG-Cards-Heal_3: -7257506456496557580
+      RPG-Cards-Heal_4: -2823951794070017042
+      RPG-Cards-Heal_5: -8837080030308210405
+      RPG-Cards-Heal_6: 4439097402515120650
+      RPG-Cards-Heal_7: -5378561302499558602
+      RPG-Cards-Heal_8: -6493450073695599800
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
