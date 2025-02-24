@@ -9,6 +9,23 @@ public class HandManager : MonoBehaviour
     public Transform handUI; // 핸드 UI 패널 (Horizontal Layout Group 사용)
     public GameObject cardUIPrefab; // 카드 UI 프리팹
     public int maxHandSize = 5; // 최대 핸드 크기
+    public static HandManager Instance;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+    public bool IsAnimating()
+    {
+        return isAnimating;
+    }
 
     private void Start()
     {
@@ -16,6 +33,27 @@ public class HandManager : MonoBehaviour
         DrawStartingHand();
         StartCoroutine(DelayedPlayCardsSequentially()); // ✅ 일정 시간 기다린 후 플레이 시작
     }
+    public void AddCardToHand(Card card)
+{
+    if (hand.Count < maxHandSize)
+    {
+        hand.Add(card);
+        GameObject cardUI = Instantiate(cardUIPrefab, handUI);
+        
+        CardUI cardUIComponent = cardUI.GetComponent<CardUI>();
+        if (cardUIComponent != null)
+        {
+            cardUIComponent.SetCardData(card);
+            Debug.Log($"Card UI updated for: {card.cardName}");
+        }
+
+        Debug.Log($"Added card to hand: {card.cardName}. Current hand size: {hand.Count}");
+    }
+    else
+    {
+        Debug.Log("Hand is full. Cannot add more cards.");
+    }
+}
 
     void DrawStartingHand()
     {
@@ -71,26 +109,31 @@ public class HandManager : MonoBehaviour
         StartCoroutine(PlayCardsSequentially());
     }
 
+private bool isAnimating = false; // ✅ 애니메이션 진행 여부 확인 변수
+
     private IEnumerator PlayCardsSequentially()
     {
         Debug.Log("Starting sequential card play.");
+        isAnimating = true; // ✅ 애니메이션 시작
         while (hand.Count > 0)
         {
             Card card = hand[0];
             Debug.Log($"Using card: {card.cardName}");
             card.Use();
             hand.RemoveAt(0);
-            
-            CardUI cardUI = handUI.GetChild(0).GetComponent<CardUI>(); // ✅ 첫 번째 카드의 UI 가져오기
+
+            CardUI cardUI = handUI.GetChild(0).GetComponent<CardUI>();
             if (cardUI != null)
             {
-                cardUI.PlayUseAnimation(); // ✅ 카드 UI 애니메이션 실행
-                yield return new WaitForSeconds(2f); // ✅ 애니메이션 시간을 늘려서 부드럽게
+                cardUI.PlayUseAnimation();
+                yield return new WaitForSeconds(2f);
             }
-            
-            DeckManager.Instance.AddToGraveyard(card); // ✅ 사용된 카드를 묘지로 이동
+
+            DeckManager.Instance.AddToGraveyard(card);
             Debug.Log($"Moved {card.cardName} to graveyard. Current graveyard size: {DeckManager.Instance.graveyard.Count}");
         }
+        isAnimating = false; // ✅ 애니메이션 종료
         Debug.Log("All cards played from hand.");
     }
+
 }

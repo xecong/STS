@@ -102,6 +102,22 @@ public class DeckManager : MonoBehaviour
         Debug.Log("Deck shuffled!");
     }
 
+    public void DrawCardFromDeck()
+    {
+        if (deck.Count > 0)
+        {
+            Card drawnCard = deck[0];
+            deck.RemoveAt(0); // ✅ 덱에서 카드 제거
+            UpdateDeckUI(); // ✅ UI 업데이트
+            HandManager.Instance.AddCardToHand(drawnCard);
+            Debug.Log($"Drew card: {drawnCard.cardName}. Remaining deck size: {deck.Count}");
+        }
+        else
+        {
+            Debug.Log("Deck is empty, cannot draw more cards.");
+        }
+    }
+
     public void MoveGraveyardToDeck()
     {
         if (graveyard.Count > 0)
@@ -142,9 +158,14 @@ public class DeckManager : MonoBehaviour
 
     public void ShowDeckCount()
     {
-        if (deckCountText != null)
-            deckCountText.gameObject.SetActive(true);
+        if (!HandManager.Instance.IsAnimating()) // ✅ 애니메이션 중이 아니면 표시
+        {
+            if (deckCountText != null)
+                deckCountText.gameObject.SetActive(true);
+        }
     }
+
+
 
     public void HideDeckCount()
     {
@@ -154,10 +175,13 @@ public class DeckManager : MonoBehaviour
 
     public void ShowGraveyardCount()
     {
-        if (graveyardCountText != null)
-            graveyardCountText.gameObject.SetActive(true);
+        if (!HandManager.Instance.IsAnimating()) // ✅ 애니메이션 중이 아니면 표시
+        {
+            if (graveyardCountText != null)
+                graveyardCountText.gameObject.SetActive(true);
+        }
     }
-
+    
     public void HideGraveyardCount()
     {
         if (graveyardCountText != null)
