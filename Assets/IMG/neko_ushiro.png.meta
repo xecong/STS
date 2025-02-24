@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      neko_ushiro_0: 5656599463332020467
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -14,6 +14,7 @@ public class HandManager : MonoBehaviour
     {
         Debug.Log("HandManager started. Drawing starting hand.");
         DrawStartingHand();
+        StartCoroutine(DelayedPlayCardsSequentially()); // ✅ 일정 시간 기다린 후 플레이 시작
     }
 
     void DrawStartingHand()
@@ -40,7 +41,6 @@ public class HandManager : MonoBehaviour
             }
         }
         Debug.Log($"Hand size after drawing: {hand.Count}");
-        StartCoroutine(PlayCardsSequentially()); // ✅ 모든 카드가 뽑힌 후 순차적으로 사용
     }
 
     public void DrawCard(Card card)
@@ -65,6 +65,12 @@ public class HandManager : MonoBehaviour
         }
     }
 
+    private IEnumerator DelayedPlayCardsSequentially()
+    {
+        yield return new WaitForSeconds(2f); // ✅ 2초 대기 후 플레이 시작
+        StartCoroutine(PlayCardsSequentially());
+    }
+
     private IEnumerator PlayCardsSequentially()
     {
         Debug.Log("Starting sequential card play.");
@@ -79,12 +85,11 @@ public class HandManager : MonoBehaviour
             if (cardUI != null)
             {
                 cardUI.PlayUseAnimation(); // ✅ 카드 UI 애니메이션 실행
+                yield return new WaitForSeconds(2f); // ✅ 애니메이션 시간을 늘려서 부드럽게
             }
             
             DeckManager.Instance.AddToGraveyard(card); // ✅ 사용된 카드를 묘지로 이동
-            //Debug.Log($"Moved {card.cardName} to graveyard. Current graveyard size: {DeckManager.Instance.GetGraveyardSize()}");
-            
-            yield return new WaitForSeconds(1f); // ✅ 1초 간격으로 사용
+            Debug.Log($"Moved {card.cardName} to graveyard. Current graveyard size: {DeckManager.Instance.graveyard.Count}");
         }
         Debug.Log("All cards played from hand.");
     }

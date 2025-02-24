@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ohaka_boseki_seiyou_mark2_0: 4694418520201237656
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

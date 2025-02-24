@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cardgame_deck_hiku_0: 8488941053049435875
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

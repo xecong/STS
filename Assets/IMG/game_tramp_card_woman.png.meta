@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      game_tramp_card_woman_0: -3708937498744785884
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

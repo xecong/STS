@@ -1,11 +1,20 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class DeckManager : MonoBehaviour
 {
     public static DeckManager Instance;
-    private List<Card> deck = new List<Card>();
-    private List<Card> graveyard = new List<Card>(); // ✅ 묘지(사용된 카드 목록)
+    public List<Card> deck = new List<Card>();
+    public List<Card> graveyard = new List<Card>();
+
+    public TMP_Text deckCountText;
+    public TMP_Text graveyardCountText;
+    private GameObject deckUI; // ✅ 덱 이미지 자동 탐색
+    private GameObject graveyardUI; // ✅ 묘지 이미지 자동 탐색
 
     private void Awake()
     {
@@ -13,6 +22,7 @@ public class DeckManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else
         {
@@ -20,10 +30,57 @@ public class DeckManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        AssignUIObjects();
+        UpdateDeckUI();
+        UpdateGraveyardUI();
+        AddEventTriggers();
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        AssignUIObjects();
+        UpdateDeckUI();
+        UpdateGraveyardUI();
+        AddEventTriggers();
+    }
+
+    private void AssignUIObjects()
+    {
+        if (deckCountText == null)
+            deckCountText = GameObject.Find("DeckCountText")?.GetComponent<TMP_Text>();
+
+        if (graveyardCountText == null)
+            graveyardCountText = GameObject.Find("GraveyardCountText")?.GetComponent<TMP_Text>();
+
+        if (deckUI == null)
+            deckUI = GameObject.Find("DeckIMG"); // ✅ 덱 UI 자동 찾기
+
+        if (graveyardUI == null)
+            graveyardUI = GameObject.Find("GraveIMG"); // ✅ 묘지 UI 자동 찾기
+    }
+
+    private void AddEventTriggers()
+    {
+        if (deckUI != null)
+        {
+            AddEventTrigger(deckUI, EventTriggerType.PointerEnter, ShowDeckCount);
+            AddEventTrigger(deckUI, EventTriggerType.PointerExit, HideDeckCount);
+        }
+
+        if (graveyardUI != null)
+        {
+            AddEventTrigger(graveyardUI, EventTriggerType.PointerEnter, ShowGraveyardCount);
+            AddEventTrigger(graveyardUI, EventTriggerType.PointerExit, HideGraveyardCount);
+        }
+    }
+
     public void SetDeck(List<Card> newDeck)
     {
         deck = new List<Card>(newDeck);
-        ShuffleDeck(); // ✅ 덱을 저장할 때 자동으로 셔플
+        ShuffleDeck();
+        UpdateDeckUI();
         Debug.Log("Deck saved and shuffled! Cards: " + string.Join(", ", deck));
     }
 
@@ -41,6 +98,7 @@ public class DeckManager : MonoBehaviour
             deck[i] = deck[randomIndex];
             deck[randomIndex] = temp;
         }
+        UpdateDeckUI();
         Debug.Log("Deck shuffled!");
     }
 
@@ -50,7 +108,9 @@ public class DeckManager : MonoBehaviour
         {
             deck.AddRange(graveyard);
             graveyard.Clear();
-            ShuffleDeck(); // ✅ 묘지를 덱으로 되돌릴 때 셔플
+            ShuffleDeck();
+            UpdateDeckUI();
+            UpdateGraveyardUI();
             Debug.Log("Graveyard shuffled back into deck!");
         }
     }
@@ -58,6 +118,65 @@ public class DeckManager : MonoBehaviour
     public void AddToGraveyard(Card card)
     {
         graveyard.Add(card);
+        UpdateGraveyardUI();
         Debug.Log($"{card.cardName} moved to graveyard.");
+    }
+
+    public void UpdateDeckUI()
+    {
+        if (deckCountText != null)
+        {
+            deckCountText.text = $"Deck: {deck.Count}";
+            deckCountText.gameObject.SetActive(false);
+        }
+    }
+
+    public void UpdateGraveyardUI()
+    {
+        if (graveyardCountText != null)
+        {
+            graveyardCountText.text = $"Graveyard: {graveyard.Count}";
+            graveyardCountText.gameObject.SetActive(false);
+        }
+    }
+
+    public void ShowDeckCount()
+    {
+        if (deckCountText != null)
+            deckCountText.gameObject.SetActive(true);
+    }
+
+    public void HideDeckCount()
+    {
+        if (deckCountText != null)
+            deckCountText.gameObject.SetActive(false);
+    }
+
+    public void ShowGraveyardCount()
+    {
+        if (graveyardCountText != null)
+            graveyardCountText.gameObject.SetActive(true);
+    }
+
+    public void HideGraveyardCount()
+    {
+        if (graveyardCountText != null)
+            graveyardCountText.gameObject.SetActive(false);
+    }
+
+    // ✅ 특정 UI 오브젝트에 EventTrigger 자동 추가
+    private void AddEventTrigger(GameObject target, EventTriggerType eventType, UnityEngine.Events.UnityAction action)
+    {
+        EventTrigger trigger = target.GetComponent<EventTrigger>();
+        if (trigger == null)
+        {
+            trigger = target.AddComponent<EventTrigger>();
+        }
+
+        EventTrigger.Entry entry = new EventTrigger.Entry();
+        entry.eventID = eventType;
+        entry.callback.AddListener((eventData) => action());
+
+        trigger.triggers.Add(entry);
     }
 }
