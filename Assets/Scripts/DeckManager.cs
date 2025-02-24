@@ -4,14 +4,15 @@ using UnityEngine;
 public class DeckManager : MonoBehaviour
 {
     public static DeckManager Instance;
-    public List<Card> selectedDeck = new List<Card>(); // 플레이어가 선택한 덱 저장
+    private List<Card> deck = new List<Card>();
+    private List<Card> graveyard = new List<Card>(); // ✅ 묘지(사용된 카드 목록)
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // 씬이 바뀌어도 유지
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -19,14 +20,44 @@ public class DeckManager : MonoBehaviour
         }
     }
 
-    public void SetDeck(List<Card> deck)
+    public void SetDeck(List<Card> newDeck)
     {
-        selectedDeck = new List<Card>(deck); // 덱 저장
-        Debug.Log("Deck saved! Cards: " + string.Join(", ", selectedDeck));
+        deck = new List<Card>(newDeck);
+        ShuffleDeck(); // ✅ 덱을 저장할 때 자동으로 셔플
+        Debug.Log("Deck saved and shuffled! Cards: " + string.Join(", ", deck));
     }
 
     public List<Card> GetDeck()
     {
-        return selectedDeck; // 저장된 덱 반환
+        return new List<Card>(deck);
+    }
+
+    public void ShuffleDeck()
+    {
+        for (int i = 0; i < deck.Count; i++)
+        {
+            int randomIndex = Random.Range(i, deck.Count);
+            Card temp = deck[i];
+            deck[i] = deck[randomIndex];
+            deck[randomIndex] = temp;
+        }
+        Debug.Log("Deck shuffled!");
+    }
+
+    public void MoveGraveyardToDeck()
+    {
+        if (graveyard.Count > 0)
+        {
+            deck.AddRange(graveyard);
+            graveyard.Clear();
+            ShuffleDeck(); // ✅ 묘지를 덱으로 되돌릴 때 셔플
+            Debug.Log("Graveyard shuffled back into deck!");
+        }
+    }
+
+    public void AddToGraveyard(Card card)
+    {
+        graveyard.Add(card);
+        Debug.Log($"{card.cardName} moved to graveyard.");
     }
 }

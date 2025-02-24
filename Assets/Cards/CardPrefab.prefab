@@ -67,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8d204313058790944813c5221aba0aaa, type: 2}
+  m_sharedMaterial: {fileID: 7677007836185317959, guid: 8d204313058790944813c5221aba0aaa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -358,6 +358,7 @@ GameObject:
   - component: {fileID: 866678257358604860}
   - component: {fileID: 8545341509414604365}
   - component: {fileID: 6145126966831622933}
+  - component: {fileID: 4227647572338267192}
   m_Layer: 5
   m_Name: CardPrefab
   m_TagString: Untagged
@@ -425,3 +426,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4227647572338267192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6554320573261662372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e0df2ce3f50bc240b1923e0dcab35e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardImage: {fileID: 1522238651354057767}
+  cardNameText: {fileID: 246966642072578731}
+  cardDescriptionText: {fileID: 4053661327227687315}
+  moveUpDistance: 50
+  moveSpeed: 5
