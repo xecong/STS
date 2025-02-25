@@ -9,11 +9,17 @@ public class GameManager : MonoBehaviour
     private int turnNumber = 1;
     private bool isPlayerTurn = true;
 
-    void Start()
-    {
-        LoadPlayerDeck();
-        StartBattle();
-    }
+	void Start()
+	{
+		DeckData loadedData = SaveLoadManager.LoadDeck();
+		if (loadedData != null)
+		{
+			DeckManager.Instance.SetDeckByNames(loadedData.cardNames);
+		}
+		StartTurn();
+	}
+
+
 
     void LoadPlayerDeck()
     {

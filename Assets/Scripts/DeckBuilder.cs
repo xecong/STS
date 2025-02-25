@@ -13,6 +13,7 @@ public class DeckBuilder : MonoBehaviour
     public Button startButton; // 시작 버튼
     public int minDeckSize = 10; // 최소 덱 크기
     public int maxDeckSize = 40; // 최대 덱 크기
+	
 
     void Start()
     {
@@ -52,11 +53,13 @@ public class DeckBuilder : MonoBehaviour
         startButton.interactable = selectedDeck.Count >= minDeckSize; // 덱이 최소 10장 이상이면 활성화
     }
 
-    public void ConfirmDeck()
-    {
-        DeckManager.Instance.SetDeck(selectedDeck); // 선택한 덱 저장
-        Debug.Log("Deck confirmed and saved! Cards: " + string.Join(", ", selectedDeck));
-    }
+	public void ConfirmDeck()
+	{
+		DeckManager.Instance.SetDeck(selectedDeck);
+		SaveLoadManager.SaveDeck(selectedDeck); // ✅ 덱 저장 추가
+		Debug.Log("Deck confirmed and saved!");
+	}
+
 
     public void StartGame()
     {

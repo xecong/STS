@@ -67,4 +67,9 @@ public class CardUI : MonoBehaviour
         Debug.Log($"Animation completed. Destroying {cardData.cardName}");
         Destroy(gameObject); // 애니메이션 후 삭제
     }
+		void OnApplicationQuit()
+	{
+		SaveLoadManager.SaveDeck(DeckManager.Instance.GetDeck());
+	}
+
 }

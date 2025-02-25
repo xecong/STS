@@ -13,8 +13,8 @@ public class DeckManager : MonoBehaviour
 
     public TMP_Text deckCountText;
     public TMP_Text graveyardCountText;
-    private GameObject deckUI; // ✅ 덱 이미지 자동 탐색
-    private GameObject graveyardUI; // ✅ 묘지 이미지 자동 탐색
+    private GameObject deckUI;
+    private GameObject graveyardUI;
 
     private void Awake()
     {
@@ -32,6 +32,7 @@ public class DeckManager : MonoBehaviour
 
     private void Start()
     {
+        LoadDeckFromSave(); // ✅ JSON에서 덱 불러오기
         AssignUIObjects();
         UpdateDeckUI();
         UpdateGraveyardUI();
@@ -55,10 +56,10 @@ public class DeckManager : MonoBehaviour
             graveyardCountText = GameObject.Find("GraveyardCountText")?.GetComponent<TMP_Text>();
 
         if (deckUI == null)
-            deckUI = GameObject.Find("DeckIMG"); // ✅ 덱 UI 자동 찾기
+            deckUI = GameObject.Find("DeckIMG");
 
         if (graveyardUI == null)
-            graveyardUI = GameObject.Find("GraveIMG"); // ✅ 묘지 UI 자동 찾기
+            graveyardUI = GameObject.Find("GraveIMG");
     }
 
     private void AddEventTriggers()
@@ -81,7 +82,8 @@ public class DeckManager : MonoBehaviour
         deck = new List<Card>(newDeck);
         ShuffleDeck();
         UpdateDeckUI();
-        Debug.Log("Deck saved and shuffled! Cards: " + string.Join(", ", deck));
+        SaveDeck(); // ✅ 덱 저장 추가!
+        Debug.Log("Deck saved and shuffled!");
     }
 
     public List<Card> GetDeck()
@@ -107,14 +109,15 @@ public class DeckManager : MonoBehaviour
         if (deck.Count > 0)
         {
             Card drawnCard = deck[0];
-            deck.RemoveAt(0); // ✅ 덱에서 카드 제거
-            UpdateDeckUI(); // ✅ UI 업데이트
+            deck.RemoveAt(0);
+            UpdateDeckUI();
             HandManager.Instance.AddCardToHand(drawnCard);
             Debug.Log($"Drew card: {drawnCard.cardName}. Remaining deck size: {deck.Count}");
         }
         else
         {
-            Debug.Log("Deck is empty, cannot draw more cards.");
+            MoveGraveyardToDeck(); // ✅ 덱이 비면 묘지를 섞어 복구
+            Debug.Log("Deck was empty, recycled graveyard.");
         }
     }
 
@@ -138,6 +141,38 @@ public class DeckManager : MonoBehaviour
         Debug.Log($"{card.cardName} moved to graveyard.");
     }
 
+    public void SaveDeck()
+    {
+        SaveLoadManager.SaveDeck(deck);
+    }
+
+    public void LoadDeckFromSave()
+    {
+        DeckData loadedData = SaveLoadManager.LoadDeck();
+        if (loadedData != null)
+        {
+            SetDeckByNames(loadedData.cardNames);
+        }
+    }
+
+    public void SetDeckByNames(List<string> cardNames)
+    {
+        deck.Clear();
+        foreach (string cardName in cardNames)
+        {
+            Card card = Resources.Load<Card>("Cards/" + cardName);
+            if (card != null)
+            {
+                deck.Add(card);
+            }
+            else
+            {
+                Debug.LogError($"Card not found: {cardName}");
+            }
+        }
+        ShuffleDeck();
+    }
+
     public void UpdateDeckUI()
     {
         if (deckCountText != null)
@@ -158,14 +193,12 @@ public class DeckManager : MonoBehaviour
 
     public void ShowDeckCount()
     {
-        if (!HandManager.Instance.IsAnimating()) // ✅ 애니메이션 중이 아니면 표시
+        if (!HandManager.Instance.IsAnimating())
         {
             if (deckCountText != null)
                 deckCountText.gameObject.SetActive(true);
         }
     }
-
-
 
     public void HideDeckCount()
     {
@@ -175,20 +208,19 @@ public class DeckManager : MonoBehaviour
 
     public void ShowGraveyardCount()
     {
-        if (!HandManager.Instance.IsAnimating()) // ✅ 애니메이션 중이 아니면 표시
+        if (!HandManager.Instance.IsAnimating())
         {
             if (graveyardCountText != null)
                 graveyardCountText.gameObject.SetActive(true);
         }
     }
-    
+
     public void HideGraveyardCount()
     {
         if (graveyardCountText != null)
             graveyardCountText.gameObject.SetActive(false);
     }
 
-    // ✅ 특정 UI 오브젝트에 EventTrigger 자동 추가
     private void AddEventTrigger(GameObject target, EventTriggerType eventType, UnityEngine.Events.UnityAction action)
     {
         EventTrigger trigger = target.GetComponent<EventTrigger>();
