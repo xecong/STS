@@ -12,14 +12,34 @@ public class SaveLoadManager : MonoBehaviour
 {
     private static string savePath => Application.persistentDataPath + "/deck_save.json";
 
-    public static void SaveDeck(List<Card> deck)
+    // 매개변수가 없는 SaveDeck 메소드 - 현재 덱을 저장
+    public static void SaveDeck()
     {
-        DeckData data = new DeckData();
-        data.cardNames = deck.ConvertAll(card => card.cardName);
-
-        string json = JsonUtility.ToJson(data, true);
+        SaveDeck(CardManager.Instance.GetCurrentDeckNames());
+    }
+    
+    // 카드 이름 리스트를 매개변수로 받는 SaveDeck 메소드
+    public static void SaveDeck(List<string> cardNames)
+    {
+        DeckData data = new DeckData
+        {
+            cardNames = cardNames
+        };
+        
+        string json = JsonUtility.ToJson(data);
         File.WriteAllText(savePath, json);
-        Debug.Log("Deck Saved! " + savePath);
+        Debug.Log($"Deck saved with {cardNames.Count} cards!");
+    }
+    
+    // Card 객체 리스트를 매개변수로 받는 SaveDeck 메소드
+    public static void SaveDeck(List<Card> cards)
+    {
+        List<string> cardNames = new List<string>();
+        foreach (Card card in cards)
+        {
+            cardNames.Add(card.cardName);
+        }
+        SaveDeck(cardNames);
     }
 
     public static DeckData LoadDeck()

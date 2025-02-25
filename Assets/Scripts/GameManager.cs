@@ -1,3 +1,5 @@
+// GameManager.cs 파일 수정
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,15 +13,12 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        // ✅ DeckManager에서 JSON 불러오기
+        // ✅ SaveLoadManager에서 JSON 불러오기
         DeckData loadedData = SaveLoadManager.LoadDeck();
         if (loadedData != null)
         {
-            DeckManager.Instance.SetDeckByNames(loadedData.cardNames);
+            CardManager.Instance.InitializeDeck(loadedData.cardNames);
         }
-
-        // ✅ CardManager에 덱 초기화 요청
-        CardManager.Instance.InitializeDeck(DeckManager.Instance.GetDeck());
 
         // ✅ 전투 시작
         StartBattle();
@@ -47,36 +46,39 @@ public class GameManager : MonoBehaviour
 
     void PlayPlayerTurn()
     {
+        // 먼저 카드를 드로우
         HandManager.Instance.DrawCards();
-        StartCoroutine(WaitForHandToPlay()); // ✅ 코루틴 실행 시 StartCoroutine() 사용!
+        
+        // 핸드에 있는 카드를 자동으로 플레이하기 위해 HandManager에게 지시
+        HandManager.Instance.PlayAllCardsInHand();
+        
+        // 카드 플레이가 끝날 때까지 기다리기
+        StartCoroutine(WaitForHandToPlay());
     }
 
     private IEnumerator WaitForHandToPlay()
     {
-        // ✅ 모든 카드가 사용될 때까지 대기
+        // HandManager의 애니메이션이 끝날 때까지 대기
         while (HandManager.Instance.IsAnimating())
         {
             yield return null;
         }
-
-        // ✅ 플레이어 턴 종료
+        
+        // 모든 카드가 플레이되고 애니메이션이 끝났으면 턴 종료
         EndTurn();
     }
 
     void PlayEnemyTurn()
     {
-        // ✅ 간단한 적 행동 (더 발전 가능)
         int enemyDamage = Random.Range(5, 15);
         playerHealth -= enemyDamage;
         Debug.Log($"🔥 Enemy attacks! Player takes {enemyDamage} damage. Remaining HP: {playerHealth}");
 
-        // ✅ 적 턴 종료 후 플레이어 턴으로 전환
         EndTurn();
     }
 
     void EndTurn()
     {
-        // ✅ 승리/패배 체크
         if (playerHealth <= 0)
         {
             Debug.Log("💀 Game Over! Player is defeated.");
@@ -88,9 +90,8 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        // ✅ 턴 전환
         isPlayerTurn = !isPlayerTurn;
-        if (!isPlayerTurn) turnNumber++; // 적 턴이 끝나면 턴 번호 증가
+        if (!isPlayerTurn) turnNumber++;
 
         StartTurn();
     }

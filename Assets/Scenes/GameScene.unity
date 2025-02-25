@@ -218,10 +218,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b32bc07b1447bb94883dea0675e72143, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deck: []
-  graveyard: []
-  deckCountText: {fileID: 1107495944}
-  graveyardCountText: {fileID: 43482914}
 --- !u!4 &6347457
 Transform:
   m_ObjectHideFlags: 0
@@ -756,7 +752,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fad25a3ca53c4d45b54ddf043b64666, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerDeck: []
   playerHealth: 100
   enemyHealth: 100
 --- !u!114 &1013616098
@@ -771,10 +766,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c0931d3c394ab346921fbf26de800d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deck: []
-  hand: []
-  graveyard: []
-  handSize: 5
+  deckCountText: {fileID: 1107495944}
+  graveyardCountText: {fileID: 43482914}
 --- !u!4 &1013616099
 Transform:
   m_ObjectHideFlags: 0

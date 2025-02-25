@@ -1,11 +1,16 @@
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CardManager : MonoBehaviour
 {
     public static CardManager Instance;
-    private List<Card> deck = new List<Card>(); // ✅ 동적으로 관리할 덱
-    private List<Card> graveyard = new List<Card>(); // ✅ 묘지
+    private List<Card> deck = new List<Card>();
+    private List<Card> graveyard = new List<Card>();
+    
+    // UI 텍스트 컴포넌트 참조 추가
+    public TMP_Text deckCountText;
+    public TMP_Text graveyardCountText;
 
     private void Awake()
     {
@@ -19,20 +24,58 @@ public class CardManager : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// ✅ DeckManager에서 불러온 덱을 저장하고 초기화
-    /// </summary>
-    public void InitializeDeck(List<Card> loadedDeck)
+    private void Update()
     {
-        deck = new List<Card>(loadedDeck);
-        graveyard.Clear();
-        ShuffleDeck();
-        Debug.Log($"✅ Deck initialized with {deck.Count} cards.");
+        // UI 텍스트 업데이트
+        UpdateCountTexts();
     }
 
-    /// <summary>
-    /// ✅ 덱에서 카드 한 장 드로우 (덱이 부족하면 묘지 리사이클)
-    /// </summary>
+    // 덱과 묘지 카운트 텍스트 업데이트
+    private void UpdateCountTexts()
+    {
+        if (deckCountText != null)
+        {
+            deckCountText.text = $"덱: {deck.Count}장";
+        }
+        
+        if (graveyardCountText != null)
+        {
+            graveyardCountText.text = $"묘지: {graveyard.Count}장";
+        }
+    }
+
+    public void InitializeDeck(List<string> cardNames)
+    {
+        deck.Clear();
+        foreach (string cardName in cardNames)
+        {
+            Card card = Resources.Load<Card>("Cards/" + cardName);
+            if (card != null)
+            {
+                deck.Add(card);
+            }
+            else
+            {
+                Debug.LogError($"❌ Card not found in Resources: {cardName}");
+            }
+        }
+        graveyard.Clear();
+        ShuffleDeck();
+        
+        // 덱 초기화 후 UI 업데이트
+        UpdateCountTexts();
+    }
+
+    public int GetDeckSize()
+    {
+        return deck.Count;
+    }
+
+    public int GetGraveyardSize()
+    {
+        return graveyard.Count;
+    }
+
     public Card DrawCard()
     {
         if (deck.Count == 0)
@@ -50,36 +93,34 @@ public class CardManager : MonoBehaviour
 
         Card drawnCard = deck[0];
         deck.RemoveAt(0);
-        Debug.Log($"🃏 Drew card: {drawnCard.cardName}. Remaining deck size: {deck.Count}");
+        
+        // 카드 드로우 후 UI 업데이트
+        UpdateCountTexts();
         return drawnCard;
     }
 
-    /// <summary>
-    /// ✅ 사용한 카드를 묘지로 이동
-    /// </summary>
     public void MoveToGraveyard(Card card)
     {
         graveyard.Add(card);
-        Debug.Log($"☠️ Moved {card.cardName} to graveyard. Graveyard size: {graveyard.Count}");
+        // 묘지에 카드 추가 후 UI 업데이트
+        UpdateCountTexts();
     }
 
-    /// <summary>
-    /// ✅ 묘지를 다시 덱으로 이동 후 셔플
-    /// </summary>
     public void RecycleGraveyard()
     {
-        if (graveyard.Count > 0)
-        {
-            deck.AddRange(graveyard);
-            graveyard.Clear();
-            ShuffleDeck();
-            Debug.Log("♻️ Graveyard shuffled back into deck!");
-        }
+        int graveyardSize = graveyard.Count;
+        Debug.Log($"묘지에서 {graveyardSize}장의 카드를 덱으로 재활용합니다.");
+        
+        deck.AddRange(graveyard);
+        graveyard.Clear();
+        ShuffleDeck();
+        
+        Debug.Log($"묘지 재활용 완료. 현재 덱 크기: {deck.Count}, 묘지 크기: {graveyard.Count}");
+        
+        // 묘지 재활용 후 UI 업데이트
+        UpdateCountTexts();
     }
 
-    /// <summary>
-    /// ✅ 덱을 섞음
-    /// </summary>
     public void ShuffleDeck()
     {
         for (int i = 0; i < deck.Count; i++)
@@ -89,6 +130,15 @@ public class CardManager : MonoBehaviour
             deck[i] = deck[randomIndex];
             deck[randomIndex] = temp;
         }
-        Debug.Log("🔀 Deck shuffled!");
+    }
+
+    public List<string> GetCurrentDeckNames()
+    {
+        List<string> deckNames = new List<string>();
+        foreach (Card card in deck)
+        {
+            deckNames.Add(card.cardName);
+        }
+        return deckNames;
     }
 }
