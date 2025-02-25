@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "NewCard", menuName = "Card System/Card")]
-public class Card : ScriptableObject
+public partial class Card : ScriptableObject
 {
     public string cardName;
     public string cardDescription; // 카드 설명 추가

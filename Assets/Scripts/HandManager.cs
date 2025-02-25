@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HandManager : MonoBehaviour
+public partial class HandManager : MonoBehaviour
 {
     public List<Card> hand = new List<Card>(); // 현재 핸드에 있는 카드 리스트
     public Transform handUI; // 핸드 UI 패널 (Horizontal Layout Group 사용)
@@ -22,6 +22,17 @@ public class HandManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+        }
+    }
+    private CardSequenceHandler sequenceHandler;
+    
+    // 추가 - Start 메서드에서 시퀀스 핸들러 초기화
+    private void InitializeSequenceHandler()
+    {
+        sequenceHandler = GetComponent<CardSequenceHandler>();
+        if (sequenceHandler == null)
+        {
+            sequenceHandler = gameObject.AddComponent<CardSequenceHandler>();
         }
     }
 
@@ -137,7 +148,52 @@ public class HandManager : MonoBehaviour
             Debug.Log($"핸드 비우기 완료. 현재 묘지 크기: {CardManager.Instance.GetGraveyardSize()}");
         }
     }
-
+// HandManager.cs에 추가
+private IEnumerator EnhancedPlayCardsSequentially()
+{
+    Debug.Log("🎮 향상된 카드 순차 재생 시작!");
+    isAnimating = true;
+    
+    // 시퀀스 핸들러 초기화
+    if (sequenceHandler == null)
+    {
+        sequenceHandler = GetComponent<CardSequenceHandler>();
+        if (sequenceHandler == null)
+        {
+            sequenceHandler = gameObject.AddComponent<CardSequenceHandler>();
+        }
+    }
+    
+    // 핸드의 모든 카드를 시퀀스 처리
+    List<Card> handCopy = new List<Card>(hand);
+    sequenceHandler.ProcessCardSequence(handCopy);
+    
+    // 카드 UI 순차 재생
+    for (int i = 0; i < hand.Count; i++)
+    {
+        if (i >= handUI.childCount) break;
+        
+        Card card = hand[i];
+        CardUI cardUI = handUI.GetChild(i).GetComponent<CardUI>();
+        
+        if (cardUI != null)
+        {
+            yield return StartCoroutine(sequenceHandler.PlayCardWithTiming(cardUI, card));
+        }
+        
+        // 카드를 묘지로 이동
+        if (i < hand.Count)
+        {
+            CardManager.Instance.MoveToGraveyard(card);
+        }
+    }
+    
+    // 핸드 비우기
+    hand.Clear();
+    
+    isAnimating = false;
+    Debug.Log("✅ 향상된 카드 시퀀스 재생 완료!");
+}
     /// <summary>
     /// ✅ 핸드의 모든 카드를 플레이하는 메소드 - GameManager에서 호출됨
     /// </summary>
@@ -153,6 +209,16 @@ public class HandManager : MonoBehaviour
             Debug.Log("플레이할 카드가 없습니다.");
             isAnimating = false;
         }
+    }
+    public void StartSequentialPlay()
+    {
+        if (sequenceHandler == null)
+        {
+            InitializeSequenceHandler();
+        }
+        
+        StopAllCoroutines();
+        StartCoroutine(EnhancedPlayCardsSequentially());
     }
 
     /// <summary>

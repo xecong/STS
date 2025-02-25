@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class CardManager : MonoBehaviour
+public partial class CardManager : MonoBehaviour
 {
     public static CardManager Instance;
     private List<Card> deck = new List<Card>();

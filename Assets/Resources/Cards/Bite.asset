@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee2d74619364a5149b1ff5dbfc2d20eb, type: 3}
-  m_Name: Test2
+  m_Name: Bite
   m_EditorClassIdentifier: 
-  cardName: Test2
-  cardDescription: "\uD14C\uC2A4\uD2B82\uC785\uB2C8\uB2E4"
-  cardImage: {fileID: -7132410542676258300, guid: 99784b2f08e19594289ac9f1860a3b84, type: 3}
-  cardType: 1
+  cardName: Bite
+  cardDescription: "\uD604\uC7AC \uCD9C\uD608\uD6A8\uACFC\uC758 80%\uB9CC\uD07C \uCCB4\uB825\uC744
+    \uD68C\uBCF5\uD569\uB2C8\uB2E4."
+  cardImage: {fileID: -6427534825110849407, guid: e4ad689619ceaf84a9fc70d5de2cbb83, type: 3}
+  cardType: 3
   damage: 0
-  block: 5
+  block: 0
   bleed: 0
