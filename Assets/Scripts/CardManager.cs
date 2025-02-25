@@ -1,71 +1,94 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CardManager : MonoBehaviour
 {
-    public List<Card> deck = new List<Card>(); // 덱
-    public List<Card> hand = new List<Card>(); // 핸드
-    public List<Card> graveyard = new List<Card>(); // 무덤
-    
-    public int handSize = 5; // 매 턴 뽑을 카드 수
+    public static CardManager Instance;
+    private List<Card> deck = new List<Card>(); // ✅ 동적으로 관리할 덱
+    private List<Card> graveyard = new List<Card>(); // ✅ 묘지
 
-    void Start()
+    private void Awake()
     {
-        ShuffleDeck(); // 시작할 때 덱 섞기
-        DrawCards();   // 첫 턴 카드 뽑기
-    }
-
-    // 덱을 섞는 함수
-    public void ShuffleDeck()
-    {
-        for (int i = 0; i < deck.Count; i++)
+        if (Instance == null)
         {
-            Card temp = deck[i];
-            int randomIndex = Random.Range(i, deck.Count);
-            deck[i] = deck[randomIndex];
-            deck[randomIndex] = temp;
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
         }
     }
 
-    // 카드 뽑기
-    public void DrawCards()
+    /// <summary>
+    /// ✅ DeckManager에서 불러온 덱을 저장하고 초기화
+    /// </summary>
+    public void InitializeDeck(List<Card> loadedDeck)
     {
-        for (int i = 0; i < handSize; i++)
+        deck = new List<Card>(loadedDeck);
+        graveyard.Clear();
+        ShuffleDeck();
+        Debug.Log($"✅ Deck initialized with {deck.Count} cards.");
+    }
+
+    /// <summary>
+    /// ✅ 덱에서 카드 한 장 드로우 (덱이 부족하면 묘지 리사이클)
+    /// </summary>
+    public Card DrawCard()
+    {
+        if (deck.Count == 0)
         {
-            if (deck.Count == 0)
+            if (graveyard.Count > 0)
             {
-                RecycleDeck(); // 덱이 비면 무덤에서 다시 채우기
+                RecycleGraveyard();
             }
-            
-            if (deck.Count > 0)
+            else
             {
-                Card drawnCard = deck[0];
-                deck.RemoveAt(0);
-                hand.Add(drawnCard);
+                Debug.LogWarning("⚠ No cards left in deck or graveyard!");
+                return null;
             }
         }
+
+        Card drawnCard = deck[0];
+        deck.RemoveAt(0);
+        Debug.Log($"🃏 Drew card: {drawnCard.cardName}. Remaining deck size: {deck.Count}");
+        return drawnCard;
     }
 
-    // 핸드의 카드 자동 사용
-    public void PlayCards()
+    /// <summary>
+    /// ✅ 사용한 카드를 묘지로 이동
+    /// </summary>
+    public void MoveToGraveyard(Card card)
     {
-        foreach (Card card in new List<Card>(hand))
-        {
-            card.Use();
-            graveyard.Add(card);
-        }
-        hand.Clear();
+        graveyard.Add(card);
+        Debug.Log($"☠️ Moved {card.cardName} to graveyard. Graveyard size: {graveyard.Count}");
     }
 
-    // 무덤을 다시 덱으로 이동시키는 함수
-    public void RecycleDeck()
+    /// <summary>
+    /// ✅ 묘지를 다시 덱으로 이동 후 셔플
+    /// </summary>
+    public void RecycleGraveyard()
     {
         if (graveyard.Count > 0)
         {
             deck.AddRange(graveyard);
             graveyard.Clear();
             ShuffleDeck();
+            Debug.Log("♻️ Graveyard shuffled back into deck!");
         }
+    }
+
+    /// <summary>
+    /// ✅ 덱을 섞음
+    /// </summary>
+    public void ShuffleDeck()
+    {
+        for (int i = 0; i < deck.Count; i++)
+        {
+            int randomIndex = Random.Range(i, deck.Count);
+            Card temp = deck[i];
+            deck[i] = deck[randomIndex];
+            deck[randomIndex] = temp;
+        }
+        Debug.Log("🔀 Deck shuffled!");
     }
 }

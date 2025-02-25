@@ -42,29 +42,22 @@ public class HandManager : MonoBehaviour
     /// </summary>
     void DrawStartingHand()
     {
-        List<Card> deck = DeckManager.Instance.GetDeck();
-        Debug.Log($"Current deck size before drawing: {deck.Count}");
-
-        // ✅ 덱이 비었으면 묘지를 덱으로 되돌리고 셔플
-        if (deck.Count == 0)
-        {
-            Debug.Log("Deck is empty. Moving graveyard to deck and shuffling.");
-            DeckManager.Instance.MoveGraveyardToDeck();
-            deck = DeckManager.Instance.GetDeck();
-            Debug.Log($"New deck size after reshuffling: {deck.Count}");
-        }
+        Debug.Log($"Current deck size before drawing: {CardManager.Instance.GetDeckSize()}");
 
         for (int i = 0; i < maxHandSize; i++)
         {
-            if (deck.Count > 0)
+            Card drawnCard = CardManager.Instance.DrawCard(); // ✅ CardManager에서 뽑음
+            if (drawnCard != null)
             {
-                Debug.Log($"Drawing card {deck[0].cardName} from deck.");
-                DrawCard(deck[0]); // ✅ 카드 드로우 메서드 활용
-                deck.RemoveAt(0);
+                DrawCard(drawnCard);
             }
         }
+
         Debug.Log($"Hand size after drawing: {hand.Count}");
     }
+
+
+
 
     /// <summary>
     /// ✅ 덱에서 카드 한 장 드로우해서 핸드에 추가
@@ -140,33 +133,34 @@ public class HandManager : MonoBehaviour
     private IEnumerator PlayCardsSequentially()
     {
         Debug.Log("Starting sequential card play.");
-        isAnimating = true; // ✅ 애니메이션 시작
+        isAnimating = true;
 
         while (hand.Count > 0)
         {
             Card card = hand[0];
             Debug.Log($"Using card: {card.cardName}");
-            card.Use();
-            hand.RemoveAt(0);
 
-            // ✅ UI에서도 삭제 & 애니메이션 적용
+            card.Use(); // ✅ 카드 효과 실행
+
             if (handUI.childCount > 0)
             {
                 CardUI cardUI = handUI.GetChild(0).GetComponent<CardUI>();
                 if (cardUI != null)
                 {
                     cardUI.PlayUseAnimation();
-                    yield return new WaitForSeconds(2f); // ✅ 카드 애니메이션 후 다음 카드 사용
+                    yield return new WaitForSeconds(2f);
                 }
             }
 
-            DeckManager.Instance.AddToGraveyard(card);
-            Debug.Log($"Moved {card.cardName} to graveyard. Current graveyard size: {DeckManager.Instance.graveyard.Count}");
+            hand.RemoveAt(0);
+            CardManager.Instance.MoveToGraveyard(card); // ✅ 사용한 카드를 CardManager의 묘지로 이동
+            Debug.Log($"Moved {card.cardName} to graveyard. Graveyard size: {CardManager.Instance.GetGraveyardSize()}");
         }
 
-        isAnimating = false; // ✅ 애니메이션 종료
+        isAnimating = false;
         Debug.Log("All cards played from hand.");
     }
+
 
     /// <summary>
     /// ✅ 게임 종료 시 덱 저장
