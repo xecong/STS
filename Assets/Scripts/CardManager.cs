@@ -44,27 +44,63 @@ public partial class CardManager : MonoBehaviour
         }
     }
 
-    public void InitializeDeck(List<string> cardNames)
-    {
-        deck.Clear();
-        foreach (string cardName in cardNames)
-        {
-            Card card = Resources.Load<Card>("Cards/" + cardName);
-            if (card != null)
-            {
-                deck.Add(card);
-            }
-            else
-            {
-                Debug.LogError($"❌ Card not found in Resources: {cardName}");
-            }
-        }
-        graveyard.Clear();
-        ShuffleDeck();
-        
-        // 덱 초기화 후 UI 업데이트
-        UpdateCountTexts();
-    }
+	// CardManager.cs의 InitializeDeck 메서드 수정
+	public void InitializeDeck(List<string> cardNames)
+	{
+		deck.Clear();
+		Debug.Log($"덱 초기화 시작! 카드 이름 목록: {string.Join(", ", cardNames)}");
+
+		// 한글 이름 -> 영어 이름 매핑 추가
+		Dictionary<string, string> koreanToEnglish = new Dictionary<string, string>()
+		{
+			{ "깨물기", "Bite" },
+			{ "피폭발", "BloodExplosion" },
+			{ "면도날", "Razor" },
+			{ "숫돌", "Stone" }
+		};
+		
+		foreach (string cardName in cardNames)
+		{
+			bool cardLoaded = false;
+			
+			// 1. 먼저 이름 그대로 시도
+			Card card = Resources.Load<Card>("Cards/" + cardName);
+			
+			if (card != null)
+			{
+				deck.Add(card);
+				Debug.Log($"✅ 카드 로드 성공: {cardName}");
+				cardLoaded = true;
+			}
+			// 2. 카드를 찾지 못했고, 한글 이름이 매핑에 있다면 영어 이름으로 시도
+			else if (koreanToEnglish.ContainsKey(cardName))
+			{
+				string englishName = koreanToEnglish[cardName];
+				card = Resources.Load<Card>("Cards/" + englishName);
+				
+				if (card != null)
+				{
+					deck.Add(card);
+					Debug.Log($"✅ 한글 이름({cardName})을 영어 이름({englishName})으로 변환해서 로드 성공!");
+					cardLoaded = true;
+				}
+			}
+			
+			// 3. 그래도 카드를 찾지 못했다면 경고 표시
+			if (!cardLoaded)
+			{
+				Debug.LogError($"❌ 카드를 찾을 수 없어... 이름: {cardName}");
+			}
+		}
+		
+		graveyard.Clear();
+		ShuffleDeck();
+		
+		// 덱 초기화 후 UI 업데이트
+		UpdateCountTexts();
+		
+		Debug.Log($"덱 초기화 완료! 현재 덱 크기: {deck.Count}");
+	}
 
     public int GetDeckSize()
     {

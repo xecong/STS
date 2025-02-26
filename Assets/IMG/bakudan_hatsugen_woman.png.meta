@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bakudan_hatsugen_woman_0: 8107814909368989540
+      bakudan_hatsugen_woman_1: -2539137638896797839
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

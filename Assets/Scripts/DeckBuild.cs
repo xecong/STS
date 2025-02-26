@@ -6,92 +6,43 @@ using TMPro;
 
 public class DeckBuild : MonoBehaviour
 {
-    public List<Card> availableCards; // 선택 가능한 카드 목록
+    [Header("덱 리소스")]
+    public DeckResource deckResource;  // 인스펙터에서 할당
+    
+    [Header("선택된 덱")]
     public List<Card> selectedDeck = new List<Card>(); // 플레이어가 선택한 덱
     
+    [Header("UI 참조")]
     public Transform cardDisplayParent; // 카드 표시 영역
     public Transform selectedDeckParent; // 선택된 덱 표시 영역
     public GameObject cardUIPrefab; // 카드 UI 프리팹
     public Button startButton; // 시작 버튼
     public TextMeshProUGUI deckInfoText; // 덱 정보 텍스트
     
+    [Header("덱 설정")]
     public int minDeckSize = 10; // 최소 덱 크기
     public int maxDeckSize = 40; // 최대 덱 크기
 
     void Start()
     {
-        InitializeCardList(); // 테스트용 카드 목록 초기화
+        if (deckResource == null)
+        {
+            Debug.LogError("덱 리소스가 할당되지 않았어...! 인스펙터에서 확인해줘!!");
+            
+            // 대체 방법으로 리소스에서 로드 시도
+            deckResource = Resources.Load<DeckResource>("DeckResource/DefaultDeck");
+            
+            if (deckResource == null)
+            {
+                Debug.LogError("기본 덱 리소스도 찾을 수 없어...! DeckResource를 만들고 인스펙터에 할당해줘!");
+                return;
+            }
+        }
+        
         DisplayAvailableCards();
         startButton.onClick.AddListener(StartGame); // 시작 버튼 이벤트 등록
         startButton.interactable = false; // 덱이 준비되기 전까지 비활성화
         UpdateDeckInfo();
-    }
-
-    // 테스트용 카드 목록 초기화
-    void InitializeCardList()
-    {
-        if (availableCards == null || availableCards.Count == 0)
-        {
-            availableCards = new List<Card>();
-            
-            // Resources 폴더에서 카드 로드
-            Card[] cards = Resources.LoadAll<Card>("Cards");
-            if (cards != null && cards.Length > 0)
-            {
-                availableCards.AddRange(cards);
-                Debug.Log($"로드된 카드 수: {availableCards.Count}");
-            }
-            else
-            {
-                Debug.LogWarning("Resources/Cards 폴더에서 카드를 찾을 수 없습니다.");
-                // 카드가 로드되지 않으면 테스트용 카드 생성
-                CreateTestCards();
-            }
-        }
-    }
-
-    // 테스트용 카드 생성 (Resources에 카드가 없을 때 사용)
-    void CreateTestCards()
-    {
-        // 테스트용 카드들 생성 (실제로는 카드 에셋을 로드하는 것이 좋음)
-        for (int i = 0; i < 4; i++)
-        {
-            Card razorCard = ScriptableObject.CreateInstance<Card>();
-            razorCard.cardName = "면도날";
-            razorCard.cardDescription = "적에게 출혈 3을 부여합니다.";
-            razorCard.cardType = CardType.Attack;
-            razorCard.damage = 2;
-            razorCard.bleed = 3;
-            availableCards.Add(razorCard);
-        }
-
-        for (int i = 0; i < 3; i++)
-        {
-            Card whetstoneCard = ScriptableObject.CreateInstance<Card>();
-            whetstoneCard.cardName = "숫돌";
-            whetstoneCard.cardDescription = "다음 카드의 출혈 효과가 50% 증가합니다.";
-            whetstoneCard.cardType = CardType.Buff;
-            availableCards.Add(whetstoneCard);
-        }
-
-        for (int i = 0; i < 3; i++)
-        {
-            Card biteCard = ScriptableObject.CreateInstance<Card>();
-            biteCard.cardName = "깨물기";
-            biteCard.cardDescription = "적의 현재 출혈 효과의 80%만큼 체력을 회복합니다.";
-            biteCard.cardType = CardType.Special;
-            biteCard.damage = 1;
-            availableCards.Add(biteCard);
-        }
-
-        for (int i = 0; i < 2; i++)
-        {
-            Card explosionCard = ScriptableObject.CreateInstance<Card>();
-            explosionCard.cardName = "피폭발";
-            explosionCard.cardDescription = "적의 모든 출혈 효과를 한번에 터뜨려 2배의 데미지를 입힙니다.";
-            explosionCard.cardType = CardType.Attack;
-            availableCards.Add(explosionCard);
-        }
     }
 
     void DisplayAvailableCards()
@@ -102,43 +53,43 @@ public class DeckBuild : MonoBehaviour
             Destroy(child.gameObject);
         }
         
-        Debug.Log($"표시할 카드 수: {availableCards.Count}");
-        
-        foreach (Card card in availableCards)
+        if (deckResource.availableCards.Count == 0)
         {
+            Debug.LogWarning("표시할 카드가 없어... DeckResource에 카드를 추가해줘!");
+            return;
+        }
+        
+        Debug.Log($"표시할 카드 수: {deckResource.availableCards.Count}");
+        
+        foreach (Card card in deckResource.availableCards)
+        {
+            if (card == null) continue;
+            
             GameObject cardUI = Instantiate(cardUIPrefab, cardDisplayParent);
             
-            // EnhancedCardUI 컴포넌트 사용 (있는 경우)
-            EnhancedCardUI enhancedCardUI = cardUI.GetComponent<EnhancedCardUI>();
-            if (enhancedCardUI != null)
+            // CardUI 컴포넌트 확인
+            CardUI cardUIComponent = cardUI.GetComponent<CardUI>();
+            if (cardUIComponent != null)
             {
-                enhancedCardUI.SetCardData(card);
-                Debug.Log($"EnhancedCardUI로 카드 표시: {card.cardName}");
+                cardUIComponent.SetCardData(card);
+                Debug.Log($"카드 UI 업데이트 완료: {card.cardName}");
             }
             else
             {
-                // 기본 텍스트 업데이트 (EnhancedCardUI가 없는 경우)
-                TMPro.TextMeshProUGUI cardNameText = cardUI.GetComponentInChildren<TMPro.TextMeshProUGUI>();
-                if (cardNameText != null)
+                // EnhancedCardUI 시도
+                EnhancedCardUI enhancedCardUI = cardUI.GetComponent<EnhancedCardUI>();
+                if (enhancedCardUI != null)
                 {
-                    cardNameText.text = card.cardName;
-                    Debug.Log($"TextMeshProUGUI로 카드 표시: {card.cardName}");
+                    enhancedCardUI.SetCardData(card);
+                    Debug.Log($"EnhancedCardUI로 카드 표시: {card.cardName}");
                 }
                 else
                 {
-                    Text legacyText = cardUI.GetComponentInChildren<Text>();
-                    if (legacyText != null)
-                    {
-                        legacyText.text = card.cardName;
-                        Debug.Log($"Legacy Text로 카드 표시: {card.cardName}");
-                    }
-                    else
-                    {
-                        Debug.LogError($"카드 '{card.cardName}'에 텍스트 컴포넌트를 찾을 수 없습니다.");
-                    }
+                    Debug.LogError($"카드 '{card.cardName}'에 UI 컴포넌트가 없어...! 프리팹을 확인해줘!");
                 }
             }
             
+            // 버튼 컴포넌트에 이벤트 추가
             Button button = cardUI.GetComponent<Button>();
             if (button != null)
             {
@@ -148,35 +99,26 @@ public class DeckBuild : MonoBehaviour
             }
             else
             {
-                Debug.LogError($"카드 '{card.cardName}'에 Button 컴포넌트가 없습니다.");
+                Debug.LogError($"카드 '{card.cardName}'에 Button 컴포넌트가 없어...! 프리팹을 확인해줘!");
             }
         }
     }
+    
     public void SelectCard(Card card)
     {
         if (selectedDeck.Count < maxDeckSize)
         {
             selectedDeck.Add(card);
-            Debug.Log($"{card.cardName} added to deck. Current deck size: {selectedDeck.Count}");
+            Debug.Log($"{card.cardName} 덱에 추가됐어! 현재 덱 크기: {selectedDeck.Count}");
             
             // 선택된 덱에 카드 UI 추가
             GameObject cardUI = Instantiate(cardUIPrefab, selectedDeckParent);
             
-            // EnhancedCardUI 컴포넌트 사용 (있는 경우)
-            EnhancedCardUI enhancedCardUI = cardUI.GetComponent<EnhancedCardUI>();
-            if (enhancedCardUI != null)
+            // CardUI 컴포넌트 확인
+            CardUI cardUIComponent = cardUI.GetComponent<CardUI>();
+            if (cardUIComponent != null)
             {
-                enhancedCardUI.SetCardData(card);
-                // 카드 순서 번호 표시
-            }
-            else
-            {
-                // 기본 텍스트 업데이트 (EnhancedCardUI가 없는 경우)
-                Text cardNameText = cardUI.GetComponentInChildren<Text>();
-                if (cardNameText != null)
-                {
-                    cardNameText.text = card.cardName;
-                }
+                cardUIComponent.SetCardData(card);
             }
             
             // 삭제 버튼 이벤트 추가
@@ -189,7 +131,7 @@ public class DeckBuild : MonoBehaviour
         }
         else
         {
-            Debug.Log("Deck is full! Cannot add more cards.");
+            Debug.Log("덱이 가득 찼어! 더 이상 카드를 추가할 수 없어...");
         }
         
         CheckDeckReady();
@@ -202,7 +144,7 @@ public class DeckBuild : MonoBehaviour
         {
             Card removedCard = selectedDeck[index];
             selectedDeck.RemoveAt(index);
-            Debug.Log($"{removedCard.cardName} removed from deck. Current deck size: {selectedDeck.Count}");
+            Debug.Log($"{removedCard.cardName} 덱에서 제거됐어! 현재 덱 크기: {selectedDeck.Count}");
             
             // UI 갱신 - 모든 카드를 제거하고 다시 표시
             foreach (Transform child in selectedDeckParent)
@@ -215,21 +157,11 @@ public class DeckBuild : MonoBehaviour
                 Card card = selectedDeck[i];
                 GameObject cardUI = Instantiate(cardUIPrefab, selectedDeckParent);
                 
-                // EnhancedCardUI 컴포넌트 사용 (있는 경우)
-                EnhancedCardUI enhancedCardUI = cardUI.GetComponent<EnhancedCardUI>();
-                if (enhancedCardUI != null)
+                // CardUI 컴포넌트 확인
+                CardUI cardUIComponent = cardUI.GetComponent<CardUI>();
+                if (cardUIComponent != null)
                 {
-                    enhancedCardUI.SetCardData(card);
-                    // 카드 순서 번호 표시
-                }
-                else
-                {
-                    // 기본 텍스트 업데이트 (EnhancedCardUI가 없는 경우)
-                    Text cardNameText = cardUI.GetComponentInChildren<Text>();
-                    if (cardNameText != null)
-                    {
-                        cardNameText.text = card.cardName;
-                    }
+                    cardUIComponent.SetCardData(card);
                 }
                 
                 // 삭제 버튼 이벤트 추가
@@ -261,18 +193,71 @@ public class DeckBuild : MonoBehaviour
 
     public void ConfirmDeck()
     {
+        // DeckManager가 존재하면 덱 설정
         if (DeckManager.Instance != null)
         {
             DeckManager.Instance.SetDeck(selectedDeck);
         }
-        SaveLoadManager.SaveDeck(selectedDeck);
-        Debug.Log("Deck confirmed and saved!");
+        
+        // 선택된 덱 저장
+        List<string> cardNames = new List<string>();
+        foreach (Card card in selectedDeck)
+        {
+            cardNames.Add(card.cardName);
+        }
+        SaveLoadManager.SaveDeck(cardNames);
+        
+        Debug.Log("덱 확정하고 저장했어!");
     }
 
     public void StartGame()
     {
         ConfirmDeck(); // 게임 시작 전에 덱을 저장
-        Debug.Log("Game Started with selected deck!");
+        Debug.Log("선택한 덱으로 게임을 시작할게!");
         SceneManager.LoadScene("GameScene"); // 실제 게임 씬으로 이동
+    }
+    
+    // 테스트 덱 로드 (개발용)
+    public void LoadTestDeck()
+    {
+        if (deckResource != null && deckResource.startingDeck.Count > 0)
+        {
+            selectedDeck.Clear();
+            selectedDeck.AddRange(deckResource.startingDeck);
+            
+            Debug.Log($"테스트 덱 로드 완료! 카드 수: {selectedDeck.Count}");
+            
+            // UI 갱신
+            foreach (Transform child in selectedDeckParent)
+            {
+                Destroy(child.gameObject);
+            }
+            
+            for (int i = 0; i < selectedDeck.Count; i++)
+            {
+                Card card = selectedDeck[i];
+                GameObject cardUI = Instantiate(cardUIPrefab, selectedDeckParent);
+                
+                CardUI cardUIComponent = cardUI.GetComponent<CardUI>();
+                if (cardUIComponent != null)
+                {
+                    cardUIComponent.SetCardData(card);
+                }
+                
+                Button button = cardUI.GetComponent<Button>();
+                if (button != null)
+                {
+                    int tempIndex = i;
+                    button.onClick.AddListener(() => RemoveCardFromDeck(tempIndex));
+                }
+            }
+            
+            CheckDeckReady();
+            UpdateDeckInfo();
+        }
+        else
+        {
+            Debug.LogWarning("테스트 덱을 로드할 수 없어...! DeckResource의 startingDeck이 비어있어...");
+        }
     }
 }

@@ -13,8 +13,7 @@ public class CardUI : MonoBehaviour
     public float moveSpeed = 5f; // 이동 속도
     private bool isPlaying = false;
 
-    private static Queue<CardUI> cardQueue = new Queue<CardUI>(); // 사용될 카드 큐
-    private static bool isProcessing = false; // 카드 사용 진행 여부
+    // 사용되지 않는 정적 변수 제거 (사용되지 않는 큐 제거)
     private Card cardData;
 
     public void SetCardData(Card card)
@@ -23,7 +22,7 @@ public class CardUI : MonoBehaviour
         
         if (cardNameText == null || cardDescriptionText == null || cardImage == null)
         {
-            Debug.LogError("CardUI elements are not assigned properly in the prefab!");
+            Debug.LogError("CardUI 요소들이 프리팹에 제대로 할당되지 않았어요! 확인해주세요~ 😭");
             return;
         }
         
@@ -37,7 +36,7 @@ public class CardUI : MonoBehaviour
             cardNameText.text = cardData.cardName;
             cardDescriptionText.text = cardData.cardDescription;
             cardImage.sprite = cardData.cardImage;
-            Debug.Log($"Card UI updated: {cardData.cardName}");
+            Debug.Log($"카드 UI 업데이트: {cardData.cardName}");
         }
     }
 
@@ -52,7 +51,7 @@ public class CardUI : MonoBehaviour
 
     private IEnumerator MoveUpAndDestroy()
     {
-        Debug.Log($"Starting animation for {cardData.cardName}");
+        Debug.Log($"{cardData.cardName} 카드 애니메이션 시작");
         Vector3 startPos = transform.position;
         Vector3 endPos = startPos + Vector3.up * moveUpDistance;
         
@@ -64,12 +63,17 @@ public class CardUI : MonoBehaviour
             yield return null;
         }
 
-        Debug.Log($"Animation completed. Destroying {cardData.cardName}");
+        Debug.Log($"애니메이션 완료. {cardData.cardName} 카드 UI 제거");
         Destroy(gameObject); // 애니메이션 후 삭제
     }
-		void OnApplicationQuit()
-	{
-		SaveLoadManager.SaveDeck(DeckManager.Instance.GetDeck());
-	}
 
+    void OnApplicationQuit()
+    {
+        // SaveLoadManager.SaveDeck 메서드가 여러 버전으로 오버로드되어 있는지 확인하고 적절한 것 사용
+        if (CardManager.Instance != null)
+        {
+            SaveLoadManager.SaveDeck(CardManager.Instance.GetCurrentDeckNames());
+            Debug.Log("게임 종료 시 덱 저장 완료");
+        }
+    }
 }

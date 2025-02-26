@@ -9,14 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee2d74619364a5149b1ff5dbfc2d20eb, type: 3}
+  m_Script: {fileID: 11500000, guid: d42e73cf4614abf43aab13e77bb3307d, type: 3}
   m_Name: BloodExplosion
-  m_EditorClassIdentifier: 
-  cardName: BloodExplosion
-  cardDescription: "\uC801\uC758\uBAA8\uB4E0 \uCD9C\uD608 \uB370\uBBF8\uC9C0\uB97C
-    \uD130\uB728\uB824 2\uBC30\uC758 \uB370\uBBF8\uC9C0 \uC785\uD799\uB2C8\uB2E4."
+  m_EditorClassIdentifier: Assembly-CSharp::Card
+  cardName: "\uD53C\uD3ED\uBC1C"
+  cardDescription: "\uC0C1\uB300\uAC00 \uBC1B\uACE0\uC788\uB294 \uCD9C\uD608\uB370\uBBF8\uC9C0\uC758
+    2\uBC30\uB9CC\uD07C \uB370\uBBF8\uC9C0\uB97C \uC785\uD788\uACE0, \uCD9C\uD608\uC744
+    \uC81C\uAC70\uD569\uB2C8\uB2E4."
   cardImage: {fileID: 8107814909368989540, guid: 24e2ade1b69eb614ca7cfc9ea8c20c19, type: 3}
-  cardType: 0
+  cardType: 3
   damage: 0
   block: 0
   bleed: 0

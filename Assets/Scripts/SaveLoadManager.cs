@@ -32,15 +32,28 @@ public class SaveLoadManager : MonoBehaviour
     }
     
     // Card 객체 리스트를 매개변수로 받는 SaveDeck 메소드
-    public static void SaveDeck(List<Card> cards)
-    {
-        List<string> cardNames = new List<string>();
-        foreach (Card card in cards)
-        {
-            cardNames.Add(card.cardName);
-        }
-        SaveDeck(cardNames);
-    }
+	public static void SaveDeck(List<Card> deck)
+	{
+		// 빈 덱은 저장하지 않도록 검사 추가
+		if (deck == null || deck.Count == 0)
+		{
+			Debug.LogWarning("빈 덱을 저장하려고 했습니다! 무시합니다...");
+			return;
+		}
+		
+		DeckData data = new DeckData();
+		data.cardNames = new List<string>();
+		
+		foreach (Card card in deck)
+		{
+			data.cardNames.Add(card.cardName);
+		}
+		
+		string json = JsonUtility.ToJson(data);
+		File.WriteAllText(savePath, json);
+		Debug.Log($"덱 저장 완료: {deck.Count}장의 카드!");
+	}
+
 
     public static DeckData LoadDeck()
     {

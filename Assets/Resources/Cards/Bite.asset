@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee2d74619364a5149b1ff5dbfc2d20eb, type: 3}
+  m_Script: {fileID: 11500000, guid: d42e73cf4614abf43aab13e77bb3307d, type: 3}
   m_Name: Bite
   m_EditorClassIdentifier: 
-  cardName: Bite
-  cardDescription: "\uD604\uC7AC \uCD9C\uD608\uD6A8\uACFC\uC758 80%\uB9CC\uD07C \uCCB4\uB825\uC744
+  cardName: "\uAE68\uBB3C\uAE30"
+  cardDescription: "\uCD9C\uD608\uB370\uBBF8\uC9C0\uC758 80%\uB9CC\uD07C \uCCB4\uB825\uC744
     \uD68C\uBCF5\uD569\uB2C8\uB2E4."
   cardImage: {fileID: -6427534825110849407, guid: e4ad689619ceaf84a9fc70d5de2cbb83, type: 3}
   cardType: 3

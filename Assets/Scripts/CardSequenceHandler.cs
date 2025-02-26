@@ -36,8 +36,9 @@ public partial class CardSequenceHandler : MonoBehaviour
     // 필요한 참조 초기화
     private void InitializeReferences()
     {
-        enemyStatus = FindObjectOfType<EnemyStatus>();
-        playerStatus = FindObjectOfType<PlayerStatus>();
+        // FindObjectOfType 대신 권장되는 FindFirstObjectByType 사용
+        enemyStatus = FindFirstObjectByType<EnemyStatus>();
+        playerStatus = FindFirstObjectByType<PlayerStatus>();
         
         if (enemyStatus == null || playerStatus == null)
         {
@@ -100,6 +101,12 @@ public partial class CardSequenceHandler : MonoBehaviour
         }
         
         Debug.Log("✨ 카드 시퀀스 처리 완료!");
+        
+        // HandManager의 애니메이션 상태를 false로 설정하여 턴이 끝날 수 있게 함
+        if (HandManager.Instance != null)
+        {
+            HandManager.Instance.SetAnimatingFalse();
+        }
     }
     
     // 카드 간 상호작용 체크

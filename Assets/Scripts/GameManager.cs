@@ -11,19 +11,72 @@ public class GameManager : MonoBehaviour
     private int turnNumber = 1;
     private bool isPlayerTurn = true;
 
-    void Start()
+
+	void Start()
+	{
+		// JSON에서 덱 불러오기
+		DeckData loadedData = SaveLoadManager.LoadDeck();
+		if (loadedData != null && loadedData.cardNames != null && loadedData.cardNames.Count > 0)
+		{
+			Debug.Log($"JSON에서 덱 로드 성공. 카드 수: {loadedData.cardNames.Count}");
+			// 새로운 CardManager에 덱 초기화
+			if (CardManager.Instance != null)
+			{
+				CardManager.Instance.InitializeDeck(loadedData.cardNames);
+				Debug.Log("CardManager에 덱 초기화 완료");
+			}
+		}
+		else
+		{
+			Debug.LogError("덱 데이터를 불러오지 못했습니다.");
+		}
+
+		// HandManager 인스턴스 확인
+		if (HandManager.Instance == null)
+		{
+			Debug.LogError("HandManager 인스턴스를 찾을 수 없습니다!");
+		}
+		else
+		{
+			Debug.Log("HandManager 인스턴스 찾음");
+		}
+
+		// 게임 시작
+		StartBattle();
+	}
+
+	// WaitForHandToPlay 코루틴이 HandManager.IsAnimating을 참조하는 경우 수정
+	private IEnumerator WaitForHandToPlay()
+	{
+		if (HandManager.Instance != null)
+		{
+			while (HandManager.Instance.IsAnimating())
+			{
+				yield return null;
+			}
+		}
+		else
+		{
+			yield return new WaitForSeconds(1f); // HandManager가 없는 경우 기본 대기 시간
+		}
+		
+		EndTurn();
+	}
+
+// PlayerTurn 메서드에서 DrawCards 호출 부분 수정
+void PlayPlayerTurn()
+{
+    if (HandManager.Instance != null)
     {
-        // ✅ SaveLoadManager에서 JSON 불러오기
-        DeckData loadedData = SaveLoadManager.LoadDeck();
-        if (loadedData != null)
-        {
-            CardManager.Instance.InitializeDeck(loadedData.cardNames);
-        }
-
-        // ✅ 전투 시작
-        StartBattle();
+        HandManager.Instance.DrawCards();
+        StartCoroutine(WaitForHandToPlay());
     }
-
+    else
+    {
+        Debug.LogError("HandManager 인스턴스를 찾을 수 없어 카드를 드로우할 수 없습니다!");
+        EndTurn(); // 그냥 턴 종료
+    }
+}
     void StartBattle()
     {
         Debug.Log("⚔ Battle Started!");
@@ -44,29 +97,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void PlayPlayerTurn()
-    {
-        // 먼저 카드를 드로우
-        HandManager.Instance.DrawCards();
-        
-        // 핸드에 있는 카드를 자동으로 플레이하기 위해 HandManager에게 지시
-        HandManager.Instance.PlayAllCardsInHand();
-        
-        // 카드 플레이가 끝날 때까지 기다리기
-        StartCoroutine(WaitForHandToPlay());
-    }
 
-    private IEnumerator WaitForHandToPlay()
-    {
-        // HandManager의 애니메이션이 끝날 때까지 대기
-        while (HandManager.Instance.IsAnimating())
-        {
-            yield return null;
-        }
-        
-        // 모든 카드가 플레이되고 애니메이션이 끝났으면 턴 종료
-        EndTurn();
-    }
 
     void PlayEnemyTurn()
     {

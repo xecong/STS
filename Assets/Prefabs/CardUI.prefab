@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 80, y: -90}
+  m_AnchoredPosition: {x: -48, y: 27}
   m_SizeDelta: {x: 80, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2408851719198704564
@@ -642,8 +642,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Razor
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8d204313058790944813c5221aba0aaa, type: 2}
+  m_sharedMaterial: {fileID: 7677007836185317959, guid: 8d204313058790944813c5221aba0aaa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -798,6 +798,7 @@ GameObject:
   - component: {fileID: 4576394039881301896}
   - component: {fileID: 3462016656168737476}
   - component: {fileID: 6457082044462516448}
+  - component: {fileID: 2705320777233043127}
   m_Layer: 5
   m_Name: CardUI
   m_TagString: Untagged
@@ -913,3 +914,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2705320777233043127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8762811831614279343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e0df2ce3f50bc240b1923e0dcab35e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardImage: {fileID: 5064108379922627100}
+  cardNameText: {fileID: 5764162422815873468}
+  cardDescriptionText: {fileID: 8955068284845580486}
+  moveUpDistance: 50
+  moveSpeed: 5
