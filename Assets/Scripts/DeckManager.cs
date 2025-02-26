@@ -53,30 +53,41 @@ public class DeckManager : MonoBehaviour
         Debug.Log("Deck saved through DeckManager");
     }
 
+    // DeckManager.cs의 LoadDeckFromSave() 메서드 수정
     public void LoadDeckFromSave()
     {
         DeckData loadedData = SaveLoadManager.LoadDeck();
-        if (loadedData != null)
+        if (loadedData != null && loadedData.cardNames != null && loadedData.cardNames.Count > 0)
         {
             loadedDeck.Clear();
             foreach (string cardName in loadedData.cardNames)
             {
+                // 디버그 로그 추가
+                Debug.Log($"🃏 카드 로드 시도: {cardName}");
+
                 Card card = Resources.Load<Card>("Cards/" + cardName);
                 if (card != null)
                 {
                     loadedDeck.Add(card);
+                    Debug.Log($"✅ 카드 로드 성공: {cardName}");
                 }
                 else
                 {
-                    Debug.LogError($"❌ Card not found in Resources: {cardName}");
+                    Debug.LogError($"❌ 카드를 찾을 수 없음: {cardName}");
                 }
             }
             
             // CardManager가 존재하면 덱 초기화
             if (CardManager.Instance != null)
             {
-                CardManager.Instance.InitializeDeck(loadedDeck.ConvertAll(card => card.cardName));
+                List<string> cardNames = loadedDeck.ConvertAll(card => card.cardName);
+                CardManager.Instance.InitializeDeck(cardNames);
+                Debug.Log($"🎉 덱 초기화 완료. 총 {cardNames.Count}장의 카드");
             }
+        }
+        else
+        {
+            Debug.LogError("😱 덱 데이터가 없거나 비어있어요!");
         }
     }
 }

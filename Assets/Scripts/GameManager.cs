@@ -14,69 +14,58 @@ public class GameManager : MonoBehaviour
 
 	void Start()
 	{
-		// JSON에서 덱 불러오기
-		DeckData loadedData = SaveLoadManager.LoadDeck();
-		if (loadedData != null && loadedData.cardNames != null && loadedData.cardNames.Count > 0)
-		{
-			Debug.Log($"JSON에서 덱 로드 성공. 카드 수: {loadedData.cardNames.Count}");
-			// 새로운 CardManager에 덱 초기화
-			if (CardManager.Instance != null)
-			{
-				CardManager.Instance.InitializeDeck(loadedData.cardNames);
-				Debug.Log("CardManager에 덱 초기화 완료");
-			}
-		}
-		else
-		{
-			Debug.LogError("덱 데이터를 불러오지 못했습니다.");
-		}
-
-		// HandManager 인스턴스 확인
-		if (HandManager.Instance == null)
-		{
-			Debug.LogError("HandManager 인스턴스를 찾을 수 없습니다!");
-		}
-		else
-		{
-			Debug.Log("HandManager 인스턴스 찾음");
-		}
-
-		// 게임 시작
 		StartBattle();
 	}
 
-	// WaitForHandToPlay 코루틴이 HandManager.IsAnimating을 참조하는 경우 수정
-	private IEnumerator WaitForHandToPlay()
-	{
-		if (HandManager.Instance != null)
-		{
-			while (HandManager.Instance.IsAnimating())
-			{
-				yield return null;
-			}
-		}
-		else
-		{
-			yield return new WaitForSeconds(1f); // HandManager가 없는 경우 기본 대기 시간
-		}
-		
-		EndTurn();
-	}
+    // GameManager.cs의 WaitForHandToPlay 코루틴 수정
+    private IEnumerator WaitForHandToPlay()
+    {
+        Debug.Log("플레이어 턴: 카드 사용 대기 중...");
+        
+        // 카드를 드로우하고 잠시 대기 (UI 업데이트 시간 확보)
+        yield return new WaitForSeconds(1f);
+        
+        // 중요! 핸드의 모든 카드 플레이 호출 추가
+        if (HandManager.Instance != null)
+        {
+            Debug.Log("핸드의 모든 카드 플레이 시작");
+            HandManager.Instance.PlayAllCardsInHand();
+            
+            // 카드 애니메이션이 완료될 때까지 대기
+            while (HandManager.Instance.IsAnimating())
+            {
+                yield return null;
+            }
+        }
+        else
+        {
+            Debug.LogError("HandManager 인스턴스를 찾을 수 없어! 카드를 플레이할 수 없어...");
+            yield return new WaitForSeconds(1f); // 기본 대기
+        }
+        
+        Debug.Log("플레이어의 턴 종료. 다음 턴으로 이동!");
+        EndTurn();
+    }
 
-// PlayerTurn 메서드에서 DrawCards 호출 부분 수정
-void PlayPlayerTurn()
-{
-    if (HandManager.Instance != null)
+    // PlayerTurn 메서드 수정
+    void PlayPlayerTurn()
     {
-        HandManager.Instance.DrawCards();
-        StartCoroutine(WaitForHandToPlay());
+        if (HandManager.Instance != null)
+        {
+            // 카드 드로우
+            Debug.Log("플레이어 턴: 카드 드로우 시작!");
+            HandManager.Instance.DrawCards();
+            
+            // 카드 사용 대기 코루틴 시작
+            StartCoroutine(WaitForHandToPlay());
+        }
+        else
+        {
+            Debug.LogError("HandManager 인스턴스를 찾을 수 없어! 카드를 드로우할 수 없어...");
+            EndTurn(); // 바로 턴 종료
+        }
     }
-    else
-    {
-        Debug.LogError("HandManager 인스턴스를 찾을 수 없어 카드를 드로우할 수 없습니다!");
-        EndTurn(); // 그냥 턴 종료
-    }
-}
+    
     void StartBattle()
     {
         Debug.Log("⚔ Battle Started!");
@@ -108,8 +97,15 @@ void PlayPlayerTurn()
         EndTurn();
     }
 
+    // GameManager.cs의 EndTurn 메서드 수정
     void EndTurn()
     {
+        // 덱과 묘지 상태를 로그로 확인
+        if (CardManager.Instance != null)
+        {
+            Debug.Log($"턴 종료 시 덱 상태 - 덱 크기: {CardManager.Instance.GetDeckSize()}, 묘지 크기: {CardManager.Instance.GetGraveyardSize()}");
+        }
+        
         if (playerHealth <= 0)
         {
             Debug.Log("💀 Game Over! Player is defeated.");

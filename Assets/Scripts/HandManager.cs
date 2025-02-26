@@ -85,47 +85,39 @@ public partial class HandManager : MonoBehaviour
     }
 
 	// 이미 있는 DrawCards 메서드가 public으로 선언되어 있는지 확인
-	public void DrawCards()
-	{
-		// 기존 핸드를 먼저 비우기
-		ClearHand();
-		
-		Debug.Log($"덱 드로우 시작. 현재 덱 크기: {CardManager.Instance.GetDeckSize()}, 묘지 크기: {CardManager.Instance.GetGraveyardSize()}");
+    public void DrawCards() {
+        // 이전 턴의 핸드 정리
+        ClearHand();
+        Debug.Log($"덱 드로우 시작. 현재 덱 크기: {CardManager.Instance.GetDeckSize()}, 묘지 크기: {CardManager.Instance.GetGraveyardSize()}");
 
-		// 턴 시작 시 덱이 완전히 비어있는 경우에만 묘지에서 카드 가져오기
-		if (CardManager.Instance.GetDeckSize() == 0)
-		{
-			// 묘지에 카드가 있으면 덱으로 가져오기
-			if (CardManager.Instance.GetGraveyardSize() > 0)
-			{
-				Debug.Log("턴 시작 시 덱이 비었습니다. 묘지의 카드를 덱으로 가져옵니다.");
-				CardManager.Instance.RecycleGraveyard();
-				Debug.Log($"묘지에서 덱으로 이동 후 덱 크기: {CardManager.Instance.GetDeckSize()}");
-			}
-			else
-			{
-				Debug.Log("덱과 묘지 모두 비었습니다. 더 이상 드로우할 수 없습니다.");
-				return; // 드로우할 카드가 없으므로 함수 종료
-			}
-		}
+        // 덱이 비어있으면 묘지 재활용
+        if (CardManager.Instance.GetDeckSize() == 0) {
+            if (CardManager.Instance.GetGraveyardSize() > 0) {
+                Debug.Log("턴 시작 시 덱이 비었습니다. 묘지의 카드를 덱으로 가져옵니다.");
+                CardManager.Instance.RecycleGraveyard();
+                Debug.Log($"묘지 재활용 후 덱 크기: {CardManager.Instance.GetDeckSize()}");
+            } else {
+                Debug.Log("덱과 묘지 모두 비었습니다. 더 이상 드로우할 카드가 없습니다.");
+                return; // 남은 카드 없음
+            }
+        }
 
-		// 새로운 핸드 채우기 - 최대 5장 또는 덱의 남은 카드 수 중 작은 값
-		int cardsToDrawCount = Mathf.Min(maxHandSize, CardManager.Instance.GetDeckSize());
-		Debug.Log($"이번 턴에 {cardsToDrawCount}장의 카드를 뽑습니다.");
+        // 이번에 뽑을 카드 수 결정 (최대 5장 또는 남은 덱 카드 수)
+        int cardsToDrawCount = Mathf.Min(maxHandSize, CardManager.Instance.GetDeckSize());
+        Debug.Log($"이번 턴에 {cardsToDrawCount}장의 카드를 뽑습니다.");
 
-		for (int i = 0; i < cardsToDrawCount; i++)
-		{
-			// 카드 드로우
-			Card drawnCard = CardManager.Instance.DrawCard();
-			if (drawnCard != null)
-			{
-				DrawCard(drawnCard);
-				Debug.Log($"카드 드로우 #{i+1}: {drawnCard.cardName}. 남은 덱 크기: {CardManager.Instance.GetDeckSize()}");
-			}
-		}
-		
-		Debug.Log($"드로우 완료. 현재 핸드 크기: {hand.Count}, 덱 크기: {CardManager.Instance.GetDeckSize()}, 묘지 크기: {CardManager.Instance.GetGraveyardSize()}");
-	}
+        for (int i = 0; i < cardsToDrawCount; i++) {
+            Card drawnCard = CardManager.Instance.DrawCard();  // 덱에서 카드 한 장 뽑기
+            if (drawnCard != null) {
+                AddCardToHand(drawnCard);  // 뽑은 카드를 핸드에 추가
+                Debug.Log($"카드 드로우 #{i+1}: {drawnCard.cardName}, 남은 덱 크기: {CardManager.Instance.GetDeckSize()}");
+            }
+        }
+
+        // 모든 드로우 완료 후 최종 카드 수 확인 및 UI 업데이트
+        Debug.Log($"드로우 완료. 현재 핸드 크기: {hand.Count}, 덱 크기: {CardManager.Instance.GetDeckSize()}, 묘지 크기: {CardManager.Instance.GetGraveyardSize()}");
+        CardManager.Instance.UpdateCountTexts();  // 드로우 후 한꺼번에 UI 갱신
+    }
     private void Awake()
     {
         if (Instance == null)
@@ -177,41 +169,47 @@ public partial class HandManager : MonoBehaviour
             isAnimating = false;
         }
     }
-	private IEnumerator PlayCardsSequentially()
-	{
-		Debug.Log("카드 순차 플레이 시작");
-		isAnimating = true;
+    // HandManager.cs의 PlayCardsSequentially 코루틴 수정
+    private IEnumerator PlayCardsSequentially()
+    {
+        Debug.Log("카드 순차 플레이 시작");
+        isAnimating = true;
 
-		// 카드를 하나씩 플레이
-		while (hand.Count > 0)
-		{
-			Card card = hand[0];
-			Debug.Log($"카드 사용: {card.cardName}");
+        // 정확한 핸드 크기 로그 추가
+        Debug.Log($"현재 핸드 크기: {hand.Count}, 덱 크기: {CardManager.Instance.GetDeckSize()}, 묘지 크기: {CardManager.Instance.GetGraveyardSize()}");
 
-			// 카드 효과 적용
-			card.Use();
+        // 카드를 하나씩 플레이
+        while (hand.Count > 0)
+        {
+            Card card = hand[0];
+            Debug.Log($"카드 사용: {card.cardName}");
 
-			// 카드 UI 애니메이션 재생
-			if (handUI.childCount > 0)
-			{
-				CardUI cardUI = handUI.GetChild(0).GetComponent<CardUI>();
-				if (cardUI != null)
-				{
-					cardUI.PlayUseAnimation();
-					yield return new WaitForSeconds(0.5f); // 애니메이션 대기 시간
-				}
-			}
+            // 카드 효과 적용
+            card.Use();
 
-			// 카드를 핸드에서 제거하고 묘지로 이동
-			hand.RemoveAt(0);
-			CardManager.Instance.MoveToGraveyard(card);
-			Debug.Log($"카드 {card.cardName}을(를) 묘지로 이동. 현재 묘지 크기: {CardManager.Instance.GetGraveyardSize()}");
-		}
+            // 카드 UI 애니메이션 재생
+            if (handUI.childCount > 0)
+            {
+                CardUI cardUI = handUI.GetChild(0).GetComponent<CardUI>();
+                if (cardUI != null)
+                {
+                    cardUI.PlayUseAnimation();
+                    yield return new WaitForSeconds(0.5f); // 애니메이션 대기 시간
+                }
+            }
 
-		isAnimating = false;
-		Debug.Log("모든 카드 플레이 완료");
-	}
+            // 카드를 핸드에서 제거하고 묘지로 이동
+            hand.RemoveAt(0);
+            CardManager.Instance.MoveToGraveyard(card);
+            Debug.Log($"카드 {card.cardName}을(를) 묘지로 이동. 현재 묘지 크기: {CardManager.Instance.GetGraveyardSize()}");
+        }
 
+        // 플레이 완료 후 덱과 묘지 크기 확인 로그
+        Debug.Log($"모든 카드 플레이 완료. 덱 크기: {CardManager.Instance.GetDeckSize()}, 묘지 크기: {CardManager.Instance.GetGraveyardSize()}");
+        
+        isAnimating = false;
+        Debug.Log("모든 카드 플레이 완료");
+    }
     /// <summary>
     /// 게임 종료 시 덱 저장
     /// </summary>

@@ -31,20 +31,17 @@ public partial class CardManager : MonoBehaviour
     }
 
     // 덱과 묘지 카운트 텍스트 업데이트
-    private void UpdateCountTexts()
-    {
-        if (deckCountText != null)
-        {
+    // CardManager.cs의 UpdateCountTexts 메서드 수정
+    public void UpdateCountTexts() {
+        if (deckCountText != null) {
             deckCountText.text = $"덱: {deck.Count}장";
-        }
-        
-        if (graveyardCountText != null)
-        {
+        } 
+        if (graveyardCountText != null) {
             graveyardCountText.text = $"묘지: {graveyard.Count}장";
         }
+        // 핸드 텍스트도 필요하다면 비슷하게 업데이트
     }
-
-	// CardManager.cs의 InitializeDeck 메서드 수정
+    // CardManager.cs의 InitializeDeck 메서드 수정
 	public void InitializeDeck(List<string> cardNames)
 	{
 		deck.Clear();
@@ -142,18 +139,20 @@ public partial class CardManager : MonoBehaviour
         UpdateCountTexts();
     }
 
-    public void RecycleGraveyard()
-    {
+
+
+    public void RecycleGraveyard() {
         int graveyardSize = graveyard.Count;
         Debug.Log($"묘지에서 {graveyardSize}장의 카드를 덱으로 재활용합니다.");
-        
+
+        // 묘지의 모든 카드를 덱으로 이동
         deck.AddRange(graveyard);
-        graveyard.Clear();
-        ShuffleDeck();
-        
+        graveyard.Clear();  // 묘지 리스트 비우기
+
+        ShuffleDeck();  // 덱 셔플
         Debug.Log($"묘지 재활용 완료. 현재 덱 크기: {deck.Count}, 묘지 크기: {graveyard.Count}");
-        
-        // 묘지 재활용 후 UI 업데이트
+
+        // 재활용 후 UI 업데이트
         UpdateCountTexts();
     }
 
